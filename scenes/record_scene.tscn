@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bje1xs1ll5el8"]
+
+[ext_resource type="PackedScene" uid="uid://bv3dwqp0yq6lh" path="res://scenes/record_ui.tscn" id="1_oih1x"]
+
+[node name="recordScene" type="Node2D" unique_id=1520327312]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=874179618]
+
+[node name="recordUI" parent="CanvasLayer" unique_id=1719243649 instance=ExtResource("1_oih1x")]

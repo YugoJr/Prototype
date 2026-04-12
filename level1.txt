@@ -1,1 +1,0 @@
-var levelData = {"E": 5.67}
