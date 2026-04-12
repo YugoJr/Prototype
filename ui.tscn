@@ -7,3 +7,103 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="E" type="Panel" parent="." unique_id=1994988092]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 448.0
+offset_right = 299.0
+offset_bottom = 518.0
+
+[node name="Label" type="Label" parent="E" unique_id=2095984955]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "E"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R" type="Panel" parent="." unique_id=796632226]
+layout_mode = 0
+offset_left = 393.0
+offset_top = 524.0
+offset_right = 463.0
+offset_bottom = 594.0
+
+[node name="Label" type="Label" parent="R" unique_id=279363237]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "R"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="E2" type="Panel" parent="." unique_id=1034792399]
+layout_mode = 0
+offset_left = 632.0
+offset_top = 526.0
+offset_right = 702.0
+offset_bottom = 596.0
+
+[node name="Label" type="Label" parent="E2" unique_id=1746618558]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "U"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="R2" type="Panel" parent="." unique_id=965026930]
+layout_mode = 0
+offset_left = 701.0
+offset_top = 524.0
+offset_right = 771.0
+offset_bottom = 594.0
+
+[node name="Label" type="Label" parent="R2" unique_id=926620441]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
