@@ -11,11 +11,10 @@ config_version=5
 [application]
 
 config/name="Prototype game"
-run/main_scene="uid://d1oew52pk3a6r"
+run/main_scene="uid://bv3dwqp0yq6lh"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/show_image=false
 boot_splash/use_filter=false
-config/icon="res://icon.svg"
 
 [autoload]
 
