@@ -1,10 +1,9 @@
 extends Node
 
-enum key {E, R, U, I}
 
 @onready var noteClone = preload("res://scenes/nodes/note.tscn")
 var levelData = {
-	key.E: 3.0,
+	
 }
 
 func _ready() -> void:
