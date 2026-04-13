@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bnpkfp3pi4wix"]
+
+[ext_resource type="Texture2D" uid="uid://duq7tvm047d1e" path="res://assets/background/coa9.jpeg" id="1_fnul3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnul3"]
+bg_color = Color(0, 0, 0, 0.5058824)
+
+[node name="mainUI" type="Control" unique_id=2026747027]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="background" type="TextureRect" parent="." unique_id=1951291921]
+self_modulate = Color(0.10249352, 0.10249352, 0.10249352, 1)
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fnul3")
+expand_mode = 1
+
+[node name="playerLines" type="Node" parent="." unique_id=1938424199]
+
+[node name="Panel" type="Panel" parent="playerLines" unique_id=231553751]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -350.0
+offset_right = 37.5
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fnul3")
+
+[node name="Panel3" type="Panel" parent="playerLines" unique_id=680392843]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -117.5
+offset_top = -350.0
+offset_right = -42.5
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fnul3")
+
+[node name="Panel2" type="Panel" parent="playerLines" unique_id=152965409]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 42.5
+offset_top = -350.0
+offset_right = 117.5
+offset_bottom = 350.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fnul3")

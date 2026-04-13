@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b1b2y2ulkgdtl"]
+
+[ext_resource type="PackedScene" uid="uid://cs0y42wbyedqp" path="res://scenes/player.tscn" id="1_pw63i"]
+[ext_resource type="PackedScene" uid="uid://bnpkfp3pi4wix" path="res://scenes/main_ui.tscn" id="1_w2twt"]
+[ext_resource type="AudioStream" uid="uid://dl1wyo3sht1tv" path="res://assets/music/level1.mp3" id="3_7ykc4"]
+
+[node name="mainScene" type="Node2D" unique_id=1723682673]
+
+[node name="CanvasGroup" type="CanvasLayer" parent="." unique_id=1734742517]
+layer = -1
+
+[node name="mainUI" parent="CanvasGroup" unique_id=2026747027 instance=ExtResource("1_w2twt")]
+
+[node name="player" parent="." unique_id=210516738 instance=ExtResource("1_pw63i")]
+position = Vector2(576, 591)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=372020352]
+stream = ExtResource("3_7ykc4")
+autoplay = true

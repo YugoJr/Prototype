@@ -87,7 +87,7 @@ func saveRecording():
 	file.store_string(json)
 	
 	file.close()
-	print(">>> RECORDING SAVED SUCCESSFULLY AS: " + toRecord)
+	print(">>> RECORDING SAVED SUCCESSFULLY TO: " + toRecord)
 	get_tree().quit()
 	
 	
