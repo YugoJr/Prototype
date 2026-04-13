@@ -62,7 +62,7 @@ func _process(_delta: float) -> void:
 
 func saveNote(keyStr, time, section):
 	totalNotes += 1
-	if leftShift:
+	if (leftShift and section == "left") or (rightShift and section == "right"):
 		recording.append({"key": keyStr + "shift", "time": time})
 	else:
 		recording.append({"key": keyStr, "time": time})
