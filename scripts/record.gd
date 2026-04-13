@@ -69,20 +69,14 @@ func getSub(timeMs):
 	
 func saveRecording():
 	print(">>> SAVING RECORDING...")
+	
 	var file = FileAccess.open("res://levels/" + toRecord, FileAccess.WRITE)
 	
-	file.store_line("}")
-	var index = 0
-	for note in recording:
-		index += 1
-		var line = "\"" + note["key"] + "\": " + str(note["time"])
-		if index < recording.size():
-			line = line + ","
-		file.store_line(line)
-		
-	file.store_line("}")
+	var json = JSON.stringify(recording, "\t")
+	file.store_string(json)
+	
 	file.close()
-	print(">>> RECORDING SAVED SUCCESSFULLY")
+	print(">>> RECORDING SAVED SUCCESSFULLY AS: " + toRecord)
 	get_tree().quit()
 	
 	
