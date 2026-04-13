@@ -1,834 +1,522 @@
 [
 	{
-		"key": "keyE",
-		"time": 6.66
+		"key": "keyJ",
+		"time": 6.79
 	},
 	{
-		"key": "keyR",
-		"time": 7.02
+		"key": "keyK",
+		"time": 7.13
 	},
 	{
-		"key": "keyR",
-		"time": 7.46
+		"key": "keyJ",
+		"time": 7.31
 	},
 	{
-		"key": "keyE",
-		"time": 7.83
+		"key": "keyK",
+		"time": 7.56
 	},
 	{
-		"key": "keyC",
-		"time": 8.22
+		"key": "keyU",
+		"time": 7.74
 	},
 	{
-		"key": "keyR",
+		"key": "keyI",
+		"time": 7.87
+	},
+	{
+		"key": "keyU",
+		"time": 8.12
+	},
+	{
+		"key": "keyI",
+		"time": 8.12
+	},
+	{
+		"key": "keyU",
 		"time": 8.58
 	},
 	{
-		"key": "keyV",
-		"time": 8.75
+		"key": "keyI",
+		"time": 8.58
 	},
 	{
-		"key": "keyE",
-		"time": 8.88
+		"key": "keyU",
+		"time": 8.73
 	},
 	{
-		"key": "keyV",
-		"time": 9.11
+		"key": "keyI",
+		"time": 8.73
 	},
 	{
-		"key": "keyE",
-		"time": 9.24
+		"key": "keyU",
+		"time": 8.86
 	},
 	{
-		"key": "keyC",
-		"time": 9.77
+		"key": "keyI",
+		"time": 8.86
 	},
 	{
-		"key": "keyR",
-		"time": 10.11
+		"key": "keyRshift",
+		"time": 10.01
 	},
 	{
-		"key": "keyC",
-		"time": 10.46
+		"key": "keyRshift",
+		"time": 10.21
 	},
 	{
-		"key": "keyR",
-		"time": 10.8
+		"key": "keyRshift",
+		"time": 10.54
 	},
 	{
-		"key": "keyV",
-		"time": 11.31
+		"key": "keyRshift",
+		"time": 11.61
 	},
 	{
-		"key": "keyE",
-		"time": 11.4
+		"key": "keyRshift",
+		"time": 11.76
 	},
 	{
-		"key": "keyV",
-		"time": 11.65
+		"key": "keyIshift",
+		"time": 11.76
 	},
 	{
-		"key": "keyE",
-		"time": 11.78
-	},
-	{
-		"key": "keyV",
-		"time": 11.97
-	},
-	{
-		"key": "keyR",
-		"time": 12.46
-	},
-	{
-		"key": "keyC",
+		"key": "keyRshift",
 		"time": 12.83
 	},
 	{
-		"key": "keyR",
-		"time": 13.11
+		"key": "keyIshift",
+		"time": 13.5
 	},
 	{
-		"key": "keyC",
-		"time": 13.49
+		"key": "keyUshift",
+		"time": 13.52
 	},
 	{
-		"key": "keyE",
-		"time": 13.98
+		"key": "keyIshift",
+		"time": 13.88
 	},
 	{
-		"key": "keyV",
-		"time": 14.15
+		"key": "keyUshift",
+		"time": 13.88
 	},
 	{
-		"key": "keyE",
-		"time": 14.29
-	},
-	{
-		"key": "keyV",
-		"time": 14.53
-	},
-	{
-		"key": "keyE",
-		"time": 14.67
-	},
-	{
-		"key": "keyC",
-		"time": 15.21
-	},
-	{
-		"key": "keyR",
-		"time": 15.51
-	},
-	{
-		"key": "keyC",
-		"time": 15.86
-	},
-	{
-		"key": "keyR",
-		"time": 16.17
-	},
-	{
-		"key": "keyV",
-		"time": 16.7
-	},
-	{
-		"key": "keyE",
-		"time": 16.9
-	},
-	{
-		"key": "keyV",
-		"time": 17.13
-	},
-	{
-		"key": "keyE",
-		"time": 17.26
-	},
-	{
-		"key": "keyV",
-		"time": 17.51
-	},
-	{
-		"key": "keyR",
-		"time": 17.88
-	},
-	{
-		"key": "keyC",
-		"time": 18.26
-	},
-	{
-		"key": "keyR",
-		"time": 18.54
-	},
-	{
-		"key": "keyC",
-		"time": 18.97
-	},
-	{
-		"key": "keyE",
-		"time": 19.41
-	},
-	{
-		"key": "keyV",
-		"time": 19.97
-	},
-	{
-		"key": "keyE",
-		"time": 20.4
-	},
-	{
-		"key": "keyV",
-		"time": 20.93
-	},
-	{
-		"key": "keyR",
-		"time": 21.4
-	},
-	{
-		"key": "keyC",
-		"time": 21.78
-	},
-	{
-		"key": "keyE",
-		"time": 22.08
-	},
-	{
-		"key": "keyV",
-		"time": 22.38
-	},
-	{
-		"key": "keyR",
-		"time": 22.64
-	},
-	{
-		"key": "keyC",
-		"time": 22.92
-	},
-	{
-		"key": "keyV",
-		"time": 23.25
-	},
-	{
-		"key": "keyC",
-		"time": 23.55
-	},
-	{
-		"key": "keyV",
-		"time": 23.74
-	},
-	{
-		"key": "keyC",
-		"time": 24.0
-	},
-	{
-		"key": "keyV",
-		"time": 24.19
-	},
-	{
-		"key": "keyEshift",
-		"time": 24.75
-	},
-	{
-		"key": "keyRshift",
-		"time": 25.52
+		"key": "keyDshift",
+		"time": 14.7
 	},
 	{
 		"key": "keyCshift",
-		"time": 26.16
+		"time": 15.36
 	},
 	{
 		"key": "keyVshift",
-		"time": 26.77
+		"time": 15.58
 	},
 	{
-		"key": "keyRshift",
-		"time": 27.48
+		"key": "keyU",
+		"time": 44.28
 	},
 	{
-		"key": "keyEshift",
-		"time": 28.01
-	},
-	{
-		"key": "keyEshift",
-		"time": 28.47
-	},
-	{
-		"key": "keyRshift",
-		"time": 28.85
-	},
-	{
-		"key": "keyRshift",
-		"time": 29.24
-	},
-	{
-		"key": "keyRshift",
-		"time": 29.67
-	},
-	{
-		"key": "keyRshift",
-		"time": 30.02
-	},
-	{
-		"key": "keyEshift",
-		"time": 30.33
-	},
-	{
-		"key": "keyCshift",
-		"time": 30.69
-	},
-	{
-		"key": "keyRshift",
-		"time": 31.02
-	},
-	{
-		"key": "keyVshift",
-		"time": 31.43
-	},
-	{
-		"key": "keyRshift",
-		"time": 31.66
-	},
-	{
-		"key": "keyCshift",
-		"time": 32.09
-	},
-	{
-		"key": "keyEshift",
-		"time": 32.39
-	},
-	{
-		"key": "keyVshift",
-		"time": 32.73
-	},
-	{
-		"key": "keyVshift",
-		"time": 33.05
-	},
-	{
-		"key": "keyVshift",
-		"time": 33.43
-	},
-	{
-		"key": "keyVshift",
-		"time": 33.76
-	},
-	{
-		"key": "keyCshift",
-		"time": 34.2
-	},
-	{
-		"key": "keyCshift",
-		"time": 34.46
-	},
-	{
-		"key": "keyRshift",
-		"time": 34.76
-	},
-	{
-		"key": "keyEshift",
-		"time": 35.18
-	},
-	{
-		"key": "keyEshift",
-		"time": 35.37
-	},
-	{
-		"key": "keyVshift",
-		"time": 35.78
-	},
-	{
-		"key": "keyEshift",
-		"time": 36.34
-	},
-	{
-		"key": "keyCshift",
-		"time": 37.0
-	},
-	{
-		"key": "keyRshift",
-		"time": 37.67
-	},
-	{
-		"key": "keyRshift",
-		"time": 38.28
-	},
-	{
-		"key": "keyEshift",
-		"time": 38.87
-	},
-	{
-		"key": "keyEshift",
-		"time": 39.34
-	},
-	{
-		"key": "keyRshift",
-		"time": 39.73
-	},
-	{
-		"key": "keyEshift",
-		"time": 40.24
-	},
-	{
-		"key": "keyRshift",
-		"time": 40.6
-	},
-	{
-		"key": "keyRshift",
-		"time": 40.85
-	},
-	{
-		"key": "keyEshift",
-		"time": 41.18
-	},
-	{
-		"key": "keyRshift",
-		"time": 41.72
-	},
-	{
-		"key": "keyRshift",
-		"time": 42.07
-	},
-	{
-		"key": "keyEshift",
-		"time": 42.51
-	},
-	{
-		"key": "keyRshift",
-		"time": 42.92
-	},
-	{
-		"key": "keyRshift",
-		"time": 43.38
-	},
-	{
-		"key": "keyEshift",
-		"time": 43.92
-	},
-	{
-		"key": "keyRshift",
+		"key": "keyI",
 		"time": 44.29
 	},
 	{
-		"key": "keyRshift",
+		"key": "keyR",
+		"time": 44.42
+	},
+	{
+		"key": "keyE",
+		"time": 44.42
+	},
+	{
+		"key": "keyK",
+		"time": 44.55
+	},
+	{
+		"key": "keyJ",
+		"time": 44.55
+	},
+	{
+		"key": "keyD",
+		"time": 44.7
+	},
+	{
+		"key": "keyF",
+		"time": 44.7
+	},
+	{
+		"key": "keyK",
+		"time": 44.78
+	},
+	{
+		"key": "keyJ",
+		"time": 44.78
+	},
+	{
+		"key": "keyF",
+		"time": 44.95
+	},
+	{
+		"key": "keyK",
+		"time": 44.95
+	},
+	{
+		"key": "keyJ",
+		"time": 44.95
+	},
+	{
+		"key": "keyD",
 		"time": 44.97
 	},
 	{
-		"key": "keyRshift",
-		"time": 45.64
+		"key": "keyK",
+		"time": 45.11
 	},
 	{
-		"key": "keyEshift",
-		"time": 45.95
+		"key": "keyM",
+		"time": 45.18
 	},
 	{
-		"key": "keyEshift",
-		"time": 46.21
+		"key": "keyV",
+		"time": 45.31
 	},
 	{
-		"key": "keyRshift",
-		"time": 46.58
+		"key": "keyM",
+		"time": 45.44
 	},
 	{
-		"key": "keyCshift",
-		"time": 47.15
+		"key": "keyC",
+		"time": 45.51
 	},
 	{
-		"key": "keyVshift",
-		"time": 47.42
+		"key": "keyV",
+		"time": 45.61
 	},
 	{
-		"key": "keyVshift",
+		"key": "keyM",
+		"time": 45.69
+	},
+	{
+		"key": "keyC",
+		"time": 45.74
+	},
+	{
+		"key": "keyV",
+		"time": 45.82
+	},
+	{
+		"key": "keyC",
+		"time": 45.97
+	},
+	{
+		"key": "keyM",
+		"time": 46.04
+	},
+	{
+		"key": "key,",
+		"time": 46.79
+	},
+	{
+		"key": "keyM",
+		"time": 46.79
+	},
+	{
+		"key": "keyV",
+		"time": 46.87
+	},
+	{
+		"key": "key,",
+		"time": 46.96
+	},
+	{
+		"key": "keyM",
+		"time": 46.96
+	},
+	{
+		"key": "keyC",
+		"time": 47.09
+	},
+	{
+		"key": "key,",
+		"time": 47.09
+	},
+	{
+		"key": "keyV",
+		"time": 47.22
+	},
+	{
+		"key": "keyM",
+		"time": 47.22
+	},
+	{
+		"key": "keyD",
+		"time": 47.34
+	},
+	{
+		"key": "keyJ",
+		"time": 47.48
+	},
+	{
+		"key": "keyF",
+		"time": 47.51
+	},
+	{
+		"key": "key,",
+		"time": 47.76
+	},
+	{
+		"key": "keyM",
+		"time": 47.76
+	},
+	{
+		"key": "keyC",
+		"time": 47.83
+	},
+	{
+		"key": "keyV",
+		"time": 47.83
+	},
+	{
+		"key": "keyM",
 		"time": 47.96
 	},
 	{
-		"key": "keyRshift",
-		"time": 48.54
-	},
-	{
-		"key": "keyRshift",
-		"time": 49.18
-	},
-	{
-		"key": "keyRshift",
-		"time": 49.69
-	},
-	{
-		"key": "keyRshift",
-		"time": 49.94
-	},
-	{
-		"key": "keyRshift",
-		"time": 50.35
-	},
-	{
-		"key": "keyEshift",
-		"time": 50.63
-	},
-	{
-		"key": "keyEshift",
-		"time": 51.02
-	},
-	{
-		"key": "keyEshift",
-		"time": 51.4
-	},
-	{
-		"key": "keyEshift",
-		"time": 51.63
-	},
-	{
-		"key": "keyCshift",
-		"time": 51.95
-	},
-	{
-		"key": "keyRshift",
-		"time": 52.34
-	},
-	{
-		"key": "keyRshift",
-		"time": 52.7
-	},
-	{
-		"key": "keyRshift",
-		"time": 53.01
-	},
-	{
-		"key": "keyEshift",
-		"time": 53.33
-	},
-	{
-		"key": "keyEshift",
-		"time": 53.69
-	},
-	{
-		"key": "keyEshift",
-		"time": 54.02
-	},
-	{
-		"key": "keyEshift",
-		"time": 54.81
-	},
-	{
-		"key": "keyEshift",
-		"time": 55.12
-	},
-	{
-		"key": "keyRshift",
-		"time": 55.47
-	},
-	{
-		"key": "keyRshift",
-		"time": 55.77
-	},
-	{
-		"key": "keyEshift",
-		"time": 56.06
-	},
-	{
-		"key": "keyRshift",
-		"time": 56.32
-	},
-	{
-		"key": "keyRshift",
-		"time": 56.69
-	},
-	{
-		"key": "keyRshift",
-		"time": 56.96
-	},
-	{
-		"key": "keyEshift",
-		"time": 57.33
-	},
-	{
-		"key": "keyVshift",
-		"time": 57.77
-	},
-	{
-		"key": "keyRshift",
-		"time": 58.0
-	},
-	{
-		"key": "keyRshift",
-		"time": 58.26
-	},
-	{
-		"key": "keyCshift",
-		"time": 58.66
-	},
-	{
-		"key": "keyRshift",
-		"time": 58.92
-	},
-	{
-		"key": "keyVshift",
-		"time": 59.27
-	},
-	{
-		"key": "keyEshift",
-		"time": 59.57
-	},
-	{
-		"key": "keyEshift",
-		"time": 59.99
-	},
-	{
-		"key": "keyEshift",
-		"time": 60.24
-	},
-	{
-		"key": "keyRshift",
-		"time": 60.57
-	},
-	{
-		"key": "keyRshift",
-		"time": 60.8
-	},
-	{
-		"key": "keyRshift",
-		"time": 61.03
-	},
-	{
-		"key": "keyRshift",
-		"time": 61.4
-	},
-	{
-		"key": "keyEshift",
-		"time": 61.64
-	},
-	{
-		"key": "keyEshift",
-		"time": 61.91
-	},
-	{
-		"key": "keyEshift",
-		"time": 62.27
-	},
-	{
-		"key": "keyVshift",
-		"time": 62.7
-	},
-	{
-		"key": "keyRshift",
-		"time": 62.89
-	},
-	{
-		"key": "keyCshift",
-		"time": 63.19
-	},
-	{
-		"key": "keyRshift",
-		"time": 63.47
-	},
-	{
-		"key": "keyCshift",
-		"time": 63.78
-	},
-	{
-		"key": "keyRshift",
-		"time": 64.15
-	},
-	{
-		"key": "keyCshift",
-		"time": 64.54
-	},
-	{
-		"key": "keyRshift",
-		"time": 64.69
-	},
-	{
-		"key": "keyCshift",
-		"time": 65.11
-	},
-	{
-		"key": "keyRshift",
-		"time": 65.45
-	},
-	{
-		"key": "keyCshift",
-		"time": 65.9
-	},
-	{
-		"key": "keyRshift",
-		"time": 66.17
-	},
-	{
-		"key": "keyRshift",
-		"time": 66.45
-	},
-	{
-		"key": "keyVshift",
-		"time": 66.79
-	},
-	{
-		"key": "keyEshift",
-		"time": 66.96
-	},
-	{
-		"key": "keyCshift",
-		"time": 67.18
-	},
-	{
-		"key": "keyRshift",
-		"time": 67.44
-	},
-	{
-		"key": "keyRshift",
-		"time": 67.65
-	},
-	{
-		"key": "keyEshift",
-		"time": 68.1
-	},
-	{
-		"key": "keyRshift",
-		"time": 68.95
-	},
-	{
-		"key": "keyR",
-		"time": 69.63
-	},
-	{
-		"key": "keyE",
-		"time": 70.35
-	},
-	{
-		"key": "keyE",
-		"time": 70.93
+		"key": "key,",
+		"time": 47.98
 	},
 	{
 		"key": "keyC",
-		"time": 71.57
-	},
-	{
-		"key": "keyR",
-		"time": 72.28
+		"time": 48.02
 	},
 	{
 		"key": "keyV",
-		"time": 72.92
+		"time": 48.06
 	},
 	{
-		"key": "keyR",
-		"time": 73.64
+		"key": "keyM",
+		"time": 48.14
+	},
+	{
+		"key": "keyC",
+		"time": 48.26
+	},
+	{
+		"key": "key,",
+		"time": 48.26
 	},
 	{
 		"key": "keyV",
-		"time": 74.3
+		"time": 48.34
 	},
 	{
-		"key": "keyR",
-		"time": 74.77
-	},
-	{
-		"key": "keyC",
-		"time": 75.44
-	},
-	{
-		"key": "keyE",
-		"time": 76.05
+		"key": "keyM",
+		"time": 48.39
 	},
 	{
 		"key": "keyC",
-		"time": 76.44
+		"time": 48.47
 	},
 	{
-		"key": "keyE",
-		"time": 76.89
-	},
-	{
-		"key": "keyC",
-		"time": 77.33
+		"key": "key,",
+		"time": 48.52
 	},
 	{
 		"key": "keyV",
-		"time": 77.78
+		"time": 48.6
 	},
 	{
-		"key": "keyR",
-		"time": 78.1
+		"key": "keyM",
+		"time": 48.64
 	},
 	{
 		"key": "keyC",
-		"time": 78.42
-	},
-	{
-		"key": "keyE",
-		"time": 78.93
+		"time": 48.79
 	},
 	{
 		"key": "keyV",
-		"time": 79.77
+		"time": 48.79
 	},
 	{
-		"key": "keyE",
-		"time": 80.43
+		"key": "key,",
+		"time": 48.79
+	},
+	{
+		"key": "keyM",
+		"time": 48.79
+	},
+	{
+		"key": "key,",
+		"time": 49.0
+	},
+	{
+		"key": "keyM",
+		"time": 49.0
+	},
+	{
+		"key": "keyC",
+		"time": 49.03
 	},
 	{
 		"key": "keyV",
-		"time": 81.09
-	},
-	{
-		"key": "keyE",
-		"time": 81.71
-	},
-	{
-		"key": "keyR",
-		"time": 82.29
+		"time": 49.03
 	},
 	{
 		"key": "keyC",
-		"time": 83.03
-	},
-	{
-		"key": "keyR",
-		"time": 83.57
-	},
-	{
-		"key": "keyC",
-		"time": 84.05
-	},
-	{
-		"key": "keyE",
-		"time": 84.52
-	},
-	{
-		"key": "keyR",
-		"time": 85.74
-	},
-	{
-		"key": "keyE",
-		"time": 86.29
-	},
-	{
-		"key": "keyR",
-		"time": 86.75
-	},
-	{
-		"key": "keyE",
-		"time": 87.17
-	},
-	{
-		"key": "keyR",
-		"time": 87.7
-	},
-	{
-		"key": "keyE",
-		"time": 88.58
+		"time": 49.26
 	},
 	{
 		"key": "keyV",
-		"time": 88.92
+		"time": 49.26
 	},
 	{
-		"key": "keyR",
-		"time": 89.19
+		"key": "key,",
+		"time": 49.26
+	},
+	{
+		"key": "keyM",
+		"time": 49.26
+	},
+	{
+		"key": "key,",
+		"time": 49.54
+	},
+	{
+		"key": "keyM",
+		"time": 49.54
 	},
 	{
 		"key": "keyC",
-		"time": 89.5
+		"time": 49.56
+	},
+	{
+		"key": "keyV",
+		"time": 49.56
+	},
+	{
+		"key": "keyC",
+		"time": 49.87
+	},
+	{
+		"key": "keyV",
+		"time": 49.87
+	},
+	{
+		"key": "key,",
+		"time": 49.87
+	},
+	{
+		"key": "keyM",
+		"time": 49.87
+	},
+	{
+		"key": "key,",
+		"time": 50.13
+	},
+	{
+		"key": "keyM",
+		"time": 50.13
+	},
+	{
+		"key": "keyC",
+		"time": 50.15
+	},
+	{
+		"key": "keyV",
+		"time": 50.15
+	},
+	{
+		"key": "key,",
+		"time": 50.48
+	},
+	{
+		"key": "keyM",
+		"time": 50.48
+	},
+	{
+		"key": "keyC",
+		"time": 50.5
+	},
+	{
+		"key": "keyV",
+		"time": 50.5
+	},
+	{
+		"key": "keyC",
+		"time": 50.76
+	},
+	{
+		"key": "keyV",
+		"time": 50.76
+	},
+	{
+		"key": "key,",
+		"time": 50.76
+	},
+	{
+		"key": "keyM",
+		"time": 50.76
+	},
+	{
+		"key": "keyD",
+		"time": 51.14
+	},
+	{
+		"key": "keyK",
+		"time": 51.14
+	},
+	{
+		"key": "keyJ",
+		"time": 51.14
+	},
+	{
+		"key": "keyF",
+		"time": 51.16
+	},
+	{
+		"key": "keyD",
+		"time": 51.42
+	},
+	{
+		"key": "keyF",
+		"time": 51.42
+	},
+	{
+		"key": "keyK",
+		"time": 51.42
+	},
+	{
+		"key": "keyJ",
+		"time": 51.42
+	},
+	{
+		"key": "keyK",
+		"time": 51.6
+	},
+	{
+		"key": "keyJ",
+		"time": 51.6
+	},
+	{
+		"key": "keyD",
+		"time": 51.6
+	},
+	{
+		"key": "keyF",
+		"time": 51.6
 	},
 	{
 		"key": "keyE",
-		"time": 89.79
+		"time": 51.84
+	},
+	{
+		"key": "keyR",
+		"time": 51.88
+	},
+	{
+		"key": "keyU",
+		"time": 51.88
+	},
+	{
+		"key": "keyI",
+		"time": 51.88
 	}
 ]

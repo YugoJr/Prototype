@@ -75,7 +75,9 @@ vertical_alignment = 2
 
 [node name="noteGroup" type="Node" parent="." unique_id=2095992301]
 
-[node name="keyE" type="Panel" parent="noteGroup" unique_id=552366998]
+[node name="left" type="Node" parent="noteGroup" unique_id=1766907319]
+
+[node name="keyE" type="Panel" parent="noteGroup/left" unique_id=552366998]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -89,7 +91,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyE" unique_id=21849023]
+[node name="key" type="Label" parent="noteGroup/left/keyE" unique_id=21849023]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -101,7 +103,7 @@ text = "E"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyE" unique_id=1484563358]
+[node name="count" type="Label" parent="noteGroup/left/keyE" unique_id=1484563358]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -117,7 +119,7 @@ grow_vertical = 0
 text = "0"
 horizontal_alignment = 1
 
-[node name="keyR" type="Panel" parent="noteGroup" unique_id=907187166]
+[node name="keyR" type="Panel" parent="noteGroup/left" unique_id=907187166]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -131,7 +133,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyR" unique_id=1550438225]
+[node name="key" type="Label" parent="noteGroup/left/keyR" unique_id=1550438225]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,7 +145,7 @@ text = "R"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyR" unique_id=1935126757]
+[node name="count" type="Label" parent="noteGroup/left/keyR" unique_id=1935126757]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -159,7 +161,7 @@ grow_vertical = 0
 text = "0"
 horizontal_alignment = 1
 
-[node name="keyD" type="Panel" parent="noteGroup" unique_id=925457745]
+[node name="keyD" type="Panel" parent="noteGroup/left" unique_id=925457745]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -173,7 +175,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyD" unique_id=407835921]
+[node name="key" type="Label" parent="noteGroup/left/keyD" unique_id=407835921]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -185,7 +187,7 @@ text = "D"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyD" unique_id=351809958]
+[node name="count" type="Label" parent="noteGroup/left/keyD" unique_id=351809958]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -201,7 +203,7 @@ grow_vertical = 0
 text = "0"
 horizontal_alignment = 1
 
-[node name="keyF" type="Panel" parent="noteGroup" unique_id=1922397134]
+[node name="keyF" type="Panel" parent="noteGroup/left" unique_id=1922397134]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -215,7 +217,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyF" unique_id=1820253490]
+[node name="key" type="Label" parent="noteGroup/left/keyF" unique_id=1820253490]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -227,7 +229,7 @@ text = "F"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyF" unique_id=952348467]
+[node name="count" type="Label" parent="noteGroup/left/keyF" unique_id=952348467]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -243,7 +245,7 @@ grow_vertical = 0
 text = "0"
 horizontal_alignment = 1
 
-[node name="keyC" type="Panel" parent="noteGroup" unique_id=715478021]
+[node name="keyC" type="Panel" parent="noteGroup/left" unique_id=715478021]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -257,7 +259,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyC" unique_id=2110973967]
+[node name="key" type="Label" parent="noteGroup/left/keyC" unique_id=2110973967]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -265,11 +267,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 39
-text = "c"
+text = "C"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyC" unique_id=366975727]
+[node name="count" type="Label" parent="noteGroup/left/keyC" unique_id=366975727]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -285,7 +287,7 @@ grow_vertical = 0
 text = "0"
 horizontal_alignment = 1
 
-[node name="keyV" type="Panel" parent="noteGroup" unique_id=480397849]
+[node name="keyV" type="Panel" parent="noteGroup/left" unique_id=480397849]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -299,7 +301,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
 
-[node name="key" type="Label" parent="noteGroup/keyV" unique_id=1922033207]
+[node name="key" type="Label" parent="noteGroup/left/keyV" unique_id=1922033207]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -311,7 +313,261 @@ text = "V"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="count" type="Label" parent="noteGroup/keyV" unique_id=1979929909]
+[node name="count" type="Label" parent="noteGroup/left/keyV" unique_id=1979929909]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="right" type="Node" parent="noteGroup" unique_id=820386232]
+
+[node name="keyU" type="Panel" parent="noteGroup/right" unique_id=849469039]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = -133.0
+offset_right = 151.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/keyU" unique_id=1869384014]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "U"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/keyU" unique_id=1090026531]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="keyI" type="Panel" parent="noteGroup/right" unique_id=107453752]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = -133.0
+offset_right = 232.0
+offset_bottom = -73.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/keyI" unique_id=1444258448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "I"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/keyI" unique_id=1401465651]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="keyJ" type="Panel" parent="noteGroup/right" unique_id=1053793793]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = -33.0
+offset_right = 151.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/keyJ" unique_id=1971801579]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/keyJ" unique_id=1540663675]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="keyK" type="Panel" parent="noteGroup/right" unique_id=2026093698]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = -33.0
+offset_right = 232.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/keyK" unique_id=2041021243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "K"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/keyK" unique_id=815493950]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="keyM" type="Panel" parent="noteGroup/right" unique_id=2134027830]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 91.0
+offset_top = 67.0
+offset_right = 151.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/keyM" unique_id=276374586]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = "M"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/keyM" unique_id=821703663]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 3.0
+offset_right = 20.0
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "0"
+horizontal_alignment = 1
+
+[node name="key," type="Panel" parent="noteGroup/right" unique_id=887006944]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 172.0
+offset_top = 67.0
+offset_right = 232.0
+offset_bottom = 127.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wbr87")
+
+[node name="key" type="Label" parent="noteGroup/right/key," unique_id=2001263745]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 39
+text = ","
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="count" type="Label" parent="noteGroup/right/key," unique_id=1222356023]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -350,10 +606,10 @@ layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 148.0
-offset_top = -20.0
-offset_right = 298.0
-offset_bottom = 40.0
+offset_left = 151.0
+offset_top = -30.0
+offset_right = 301.0
+offset_bottom = 30.0
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_6jy17")
 
@@ -366,5 +622,32 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 26
 text = "Left Shift"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="shiftR" type="Panel" parent="." unique_id=1646156439]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -30.0
+offset_right = -142.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6jy17")
+
+[node name="Label" type="Label" parent="shiftR" unique_id=1348040865]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 26
+text = "Right Shift"
 horizontal_alignment = 1
 vertical_alignment = 1

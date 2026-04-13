@@ -4,8 +4,23 @@ var start_time: float
 var toRecord = "level1.txt"
 
 var leftShift = false
+var rightShift = false
 
 var recording = []
+var note_map = {
+		"noteE": [0, "left"],
+		"noteR": [1, "left"],
+		"noteD": [2, "left"],
+		"noteF": [3, "left"],
+		"noteC": [4, "left"],
+		"noteV": [5, "left"],
+		"noteU": [6, "right"],
+		"noteI": [7, "right"],
+		"noteJ": [8, "right"],
+		"noteK": [9, "right"],
+		"noteM": [10, "right"],
+		"note,": [11, "right"],
+	}
 
 func _ready() -> void:
 	start_time = Time.get_ticks_msec() / 1000.0
@@ -15,54 +30,50 @@ func _ready() -> void:
 
 var totalNotes = 0
 
-func _input(event: InputEvent) -> void:
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_1 and event.alt_pressed:
-			print(">>> RESTARTING RECORDING")
-			get_tree().reload_current_scene()
-		elif event.keycode == KEY_2 and event.alt_pressed:
-			saveRecording()
-		elif event.keycode == KEY_3 and event.alt_pressed:
-			print(">>> TERMINATING RECORDING")
-			get_tree().quit()
-			
-	if event.is_action_pressed("noteE"):
-		saveNote(global.convertToKeyStr(0), float(getSub($music.get_playback_position())))
-	elif event.is_action_pressed("noteR"):
-		saveNote(global.convertToKeyStr(1), float(getSub($music.get_playback_position())))
-	elif event.is_action_pressed("noteD"):
-		saveNote(global.convertToKeyStr(2), float(getSub($music.get_playback_position())))
-	elif event.is_action_pressed("noteF"):
-		saveNote(global.convertToKeyStr(3), float(getSub($music.get_playback_position())))
-	elif event.is_action_pressed("noteC"):
-		saveNote(global.convertToKeyStr(4), float(getSub($music.get_playback_position())))
-	elif event.is_action_pressed("noteV"):
-		saveNote(global.convertToKeyStr(5), float(getSub($music.get_playback_position())))
-		
-	if event.is_action_pressed("shiftLEFT"):
-		leftShift = true
-	elif event.is_action_released("shiftLEFT"):
-		leftShift = false
+func _unhandled_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and event.alt_pressed:
+		match event.keycode:
+			KEY_1:
+				print(">>> RESTARTING RECORDING")
+				get_tree().reload_current_scene()
+			KEY_2:
+				saveRecording()
+			KEY_3:
+				print(">>> TERMINATING RECORDING")
+				get_tree().quit()
+
+	var time := float(getSub($music.get_playback_position()))
+
+	for action in note_map.keys():
+		if event.is_action_pressed(action):
+			var data = note_map[action]
+			saveNote(global.convertToKeyStr(data[0]), time, data[1])
+			break
+
+	if event.is_action("shiftLEFT"):
+		leftShift = event.is_pressed()
+	if event.is_action("shiftRIGHT"):
+		rightShift = event.is_pressed()
 
 func _process(_delta: float) -> void:
 	$CanvasLayer/recordUI/time.text = "Time Elapsed: " +  getSub($music.get_playback_position()) + "s\nTotal Notes: " + str(totalNotes)
 	updateShift()
 
 
-func saveNote(keyStr, time):
+func saveNote(keyStr, time, section):
 	totalNotes += 1
 	if leftShift:
 		recording.append({"key": keyStr + "shift", "time": time})
 	else:
 		recording.append({"key": keyStr, "time": time})
-	get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text) + 1)
+	get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text) + 1)
 	print(keyStr + ": " + str(time) + "s")
 
 func getSub(timeMs):
 	var sub = 4
 	if timeMs > 10.0:
 		sub = 5
-	elif timeMs > 100.0:
+	if timeMs > 100.0:
 		sub = 6
 		
 	return str(timeMs).substr(0, sub)
@@ -83,12 +94,23 @@ func saveRecording():
 	
 func updateShift():
 	var leftPanel = $CanvasLayer/recordUI/shiftL
-	var notesPanel = $CanvasLayer/recordUI/noteGroup.get_children()
+	var leftNotesPanel = $CanvasLayer/recordUI/noteGroup/left.get_children()
 	if leftShift:
 		leftPanel.self_modulate.g = 0.5
-		for note in notesPanel:
+		for note in leftNotesPanel:
 			note.self_modulate.g = 0.5
 	else:
 		leftPanel.self_modulate.g = 1
-		for note in notesPanel:
+		for note in leftNotesPanel:
+			note.self_modulate.g = 1
+			
+	var rightPanel = $CanvasLayer/recordUI/shiftR
+	var rightNotesPanel = $CanvasLayer/recordUI/noteGroup/right.get_children()
+	if rightShift:
+		rightPanel.self_modulate.g = 0.5
+		for note in rightNotesPanel:
+			note.self_modulate.g = 0.5
+	else:
+		rightPanel.self_modulate.g = 1
+		for note in rightNotesPanel:
 			note.self_modulate.g = 1
