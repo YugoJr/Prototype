@@ -2,11 +2,12 @@ extends Node2D
 
 var start_time: float
 
+var recording = []
+
 func _ready() -> void:
 	start_time = Time.get_ticks_msec() / 1000.0
 	$music.play()
 
-var sub = 4
 var totalNotes = 0
 
 func _input(event: InputEvent) -> void:
@@ -14,6 +15,8 @@ func _input(event: InputEvent) -> void:
 		if event.keycode == KEY_1 and event.alt_pressed:
 			print(">>> RESTARTING RECORDING")
 			get_tree().reload_current_scene()
+		elif event.keycode == KEY_2 and event.alt_pressed:
+			saveRecording()
 		elif event.keycode == KEY_3 and event.alt_pressed:
 			print(">>> TERMINATING RECORDING")
 			get_tree().quit()
@@ -37,6 +40,7 @@ func _process(_delta: float) -> void:
 
 func saveNote(keyStr, time):
 	totalNotes += 1
+	recording.append({"key": keyStr, "time": time})
 	get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text) + 1)
 	print(keyStr + ": " + str(time) + "s")
 
@@ -48,3 +52,19 @@ func getSub(timeMs):
 		sub = 6
 		
 	return str(timeMs).substr(0, sub)
+	
+func saveRecording():
+	print(">>> SAVING RECORDING...")
+	var file = FileAccess.open("res://levels/level1.txt", FileAccess.WRITE)
+	
+	file.store_line("}")
+	var index = 0
+	for note in recording:
+		index += 1
+		var line = "\"" + note["key"] + "\": " + str(note["time"]) + ","
+		file.store_line(str(index) + ". " + line)
+		
+	file.store_line("}")
+	file.close()
+	print(">>> RECORDING SAVED SUCCESSFULLY")
+	get_tree().quit()
