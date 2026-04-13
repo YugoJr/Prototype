@@ -1,6 +1,14 @@
 }
-1. "keyE": 0.16,
-2. "keyR": 0.28,
-3. "keyF": 0.76,
-4. "keyD": 0.85,
+"keyR": 0.44,
+"keyE": 0.44,
+"keyD": 1.04,
+"keyF": 1.04,
+"keyC": 1.83,
+"keyV": 1.83,
+"keyRshift": 3.39,
+"keyEshift": 3.39,
+"keyDshift": 4.28,
+"keyFshift": 4.28,
+"keyCshift": 4.94,
+"keyVshift": 4.94
 }

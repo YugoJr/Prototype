@@ -1,12 +1,17 @@
 extends Node2D
 
 var start_time: float
+var toRecord = "level1.txt"
+
+var leftShift = false
 
 var recording = []
 
 func _ready() -> void:
 	start_time = Time.get_ticks_msec() / 1000.0
 	$music.play()
+	$CanvasLayer/recordUI/Label3.text = "Currently recording for file: " + toRecord
+	print(">>> STARTING RECORDING")
 
 var totalNotes = 0
 
@@ -33,14 +38,23 @@ func _input(event: InputEvent) -> void:
 		saveNote(global.convertToKeyStr(4), float(getSub($music.get_playback_position())))
 	elif event.is_action_pressed("noteV"):
 		saveNote(global.convertToKeyStr(5), float(getSub($music.get_playback_position())))
+		
+	if event.is_action_pressed("shiftLEFT"):
+		leftShift = true
+	elif event.is_action_released("shiftLEFT"):
+		leftShift = false
 
 func _process(_delta: float) -> void:
 	$CanvasLayer/recordUI/time.text = "Time Elapsed: " +  getSub($music.get_playback_position()) + "s\nTotal Notes: " + str(totalNotes)
+	updateShift()
 
 
 func saveNote(keyStr, time):
 	totalNotes += 1
-	recording.append({"key": keyStr, "time": time})
+	if leftShift:
+		recording.append({"key": keyStr + "shift", "time": time})
+	else:
+		recording.append({"key": keyStr, "time": time})
 	get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + keyStr + "/count").text) + 1)
 	print(keyStr + ": " + str(time) + "s")
 
@@ -55,16 +69,32 @@ func getSub(timeMs):
 	
 func saveRecording():
 	print(">>> SAVING RECORDING...")
-	var file = FileAccess.open("res://levels/level1.txt", FileAccess.WRITE)
+	var file = FileAccess.open("res://levels/" + toRecord, FileAccess.WRITE)
 	
 	file.store_line("}")
 	var index = 0
 	for note in recording:
 		index += 1
-		var line = "\"" + note["key"] + "\": " + str(note["time"]) + ","
-		file.store_line(str(index) + ". " + line)
+		var line = "\"" + note["key"] + "\": " + str(note["time"])
+		if index < recording.size():
+			line = line + ","
+		file.store_line(line)
 		
 	file.store_line("}")
 	file.close()
 	print(">>> RECORDING SAVED SUCCESSFULLY")
 	get_tree().quit()
+	
+	
+	
+func updateShift():
+	var leftPanel = $CanvasLayer/recordUI/shiftL
+	var notesPanel = $CanvasLayer/recordUI/noteGroup.get_children()
+	if leftShift:
+		leftPanel.self_modulate.g = 0.5
+		for note in notesPanel:
+			note.self_modulate.g = 0.5
+	else:
+		leftPanel.self_modulate.g = 1
+		for note in notesPanel:
+			note.self_modulate.g = 1
