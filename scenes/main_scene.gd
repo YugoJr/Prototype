@@ -8,5 +8,6 @@ func _input(event: InputEvent) -> void:
 			tween.kill()
 		tween = create_tween()
 		tween.set_pause_mode(Tween.TWEEN_PAUSE_PROCESS)
+		$canvasNodes/canvasPause/pause.visible = true
 		tween.tween_property($canvasNodes/canvasPause/pause, "modulate:a", 1.0, 0.3).set_trans(Tween.TRANS_SINE)
 		get_tree().paused = true

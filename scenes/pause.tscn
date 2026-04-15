@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://byabdedvlwdah"]
 
+[ext_resource type="Script" uid="uid://ciws70a257kp6" path="res://scripts/pause.gd" id="1_f1d2v"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m68o1"]
 bg_color = Color(0, 0, 0, 0.78431374)
 
@@ -11,13 +13,14 @@ corner_radius_bottom_right = 25
 corner_radius_bottom_left = 25
 
 [node name="pause" type="Control" unique_id=1922036458]
-process_mode = 2
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_f1d2v")
 
 [node name="Panel" type="Panel" parent="." unique_id=690436003]
 layout_mode = 1
@@ -83,7 +86,7 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Continue"
 
-[node name="Button2" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=1805754947]
+[node name="restart" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=1805754947]
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
 text = "Restart"
@@ -99,3 +102,4 @@ theme_override_font_sizes/font_size = 35
 text = "Main Menu"
 
 [connection signal="pressed" from="Panel/Panel/VBoxContainer/continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Panel/Panel/VBoxContainer/restart" to="." method="_on_restart_pressed"]

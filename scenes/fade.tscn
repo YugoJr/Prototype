@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dwy5ihqyhtcfv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv43q"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="fade" type="Control" unique_id=20099342]
+process_mode = 3
+process_priority = 1
+process_physics_priority = 1
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=435561593]
+process_mode = 3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gv43q")

@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://drbg31nof32yd" path="res://scenes/main_scene.gd" id="1_gubc5"]
 [ext_resource type="PackedScene" uid="uid://cs0y42wbyedqp" path="res://scenes/player.tscn" id="1_pw63i"]
 [ext_resource type="PackedScene" uid="uid://bnpkfp3pi4wix" path="res://scenes/main_ui.tscn" id="1_w2twt"]
+[ext_resource type="PackedScene" uid="uid://byabdedvlwdah" path="res://scenes/pause.tscn" id="2_pu3yx"]
 [ext_resource type="AudioStream" uid="uid://dl1wyo3sht1tv" path="res://assets/music/level1.mp3" id="3_7ykc4"]
+[ext_resource type="PackedScene" uid="uid://dwy5ihqyhtcfv" path="res://scenes/fade.tscn" id="4_rt2n2"]
+[ext_resource type="Script" uid="uid://cx62t34ow22j2" path="res://scripts/fade.gd" id="5_c16ls"]
 
 [node name="mainScene" type="Node2D" unique_id=1723682673]
 script = ExtResource("1_gubc5")
@@ -17,6 +20,16 @@ layer = -1
 z_index = -1
 z_as_relative = false
 metadata/_edit_use_anchors_ = true
+
+[node name="canvasPause" type="CanvasLayer" parent="canvasNodes" unique_id=1107112137]
+
+[node name="pause" parent="canvasNodes/canvasPause" unique_id=1922036458 instance=ExtResource("2_pu3yx")]
+modulate = Color(1, 1, 1, 0)
+
+[node name="fade" parent="canvasNodes/canvasPause" unique_id=20099342 instance=ExtResource("4_rt2n2")]
+self_modulate = Color(1, 1, 1, 0)
+mouse_filter = 2
+script = ExtResource("5_c16ls")
 
 [node name="player" parent="." unique_id=210516738 instance=ExtResource("1_pw63i")]
 position = Vector2(576, 591)
