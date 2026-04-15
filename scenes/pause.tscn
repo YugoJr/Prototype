@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://byabdedvlwdah"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m68o1"]
+bg_color = Color(0, 0, 0, 0.78431374)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1d2v"]
+bg_color = Color(0.12225223, 0.12225223, 0.12225223, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[node name="pause" type="Control" unique_id=1922036458]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=690436003]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m68o1")
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=1678957120]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -200.0
+offset_right = 250.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_f1d2v")
+
+[node name="Label" type="Label" parent="Panel/Panel" unique_id=2112824116]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = -193.0
+offset_right = 106.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 19
+theme_override_font_sizes/font_size = 55
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/Panel" unique_id=1559844335]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -99.5
+offset_top = -116.0
+offset_right = 99.5
+offset_bottom = 156.08997
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="continue" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=562418774]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Continue"
+
+[node name="Button2" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=1805754947]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Restart"
+
+[node name="Button3" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=1385333208]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Settings"
+
+[node name="Button4" type="Button" parent="Panel/Panel/VBoxContainer" unique_id=2057112984]
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Main Menu"
+
+[connection signal="pressed" from="Panel/Panel/VBoxContainer/continue" to="." method="_on_continue_pressed"]

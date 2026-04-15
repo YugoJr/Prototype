@@ -1,15 +1,22 @@
 [gd_scene format=3 uid="uid://b1b2y2ulkgdtl"]
 
+[ext_resource type="Script" uid="uid://drbg31nof32yd" path="res://scenes/main_scene.gd" id="1_gubc5"]
 [ext_resource type="PackedScene" uid="uid://cs0y42wbyedqp" path="res://scenes/player.tscn" id="1_pw63i"]
 [ext_resource type="PackedScene" uid="uid://bnpkfp3pi4wix" path="res://scenes/main_ui.tscn" id="1_w2twt"]
 [ext_resource type="AudioStream" uid="uid://dl1wyo3sht1tv" path="res://assets/music/level1.mp3" id="3_7ykc4"]
 
 [node name="mainScene" type="Node2D" unique_id=1723682673]
+script = ExtResource("1_gubc5")
 
-[node name="CanvasGroup" type="CanvasLayer" parent="." unique_id=1734742517]
+[node name="canvasNodes" type="Node" parent="." unique_id=521721675]
+
+[node name="canvasMain" type="CanvasLayer" parent="canvasNodes" unique_id=1734742517]
 layer = -1
 
-[node name="mainUI" parent="CanvasGroup" unique_id=2026747027 instance=ExtResource("1_w2twt")]
+[node name="mainUI" parent="canvasNodes/canvasMain" unique_id=2026747027 instance=ExtResource("1_w2twt")]
+z_index = -1
+z_as_relative = false
+metadata/_edit_use_anchors_ = true
 
 [node name="player" parent="." unique_id=210516738 instance=ExtResource("1_pw63i")]
 position = Vector2(576, 591)

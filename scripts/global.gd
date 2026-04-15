@@ -7,6 +7,7 @@ func convertToKeyStr(value):
 var viewportSize
 var centerViewport
 
+
 func _ready() -> void:
 	viewportSize = get_viewport_rect().size
 	centerViewport = viewportSize / 2

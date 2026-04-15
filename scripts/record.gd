@@ -67,7 +67,7 @@ func saveNote(keyStr, time, section):
 	else:
 		recording.append({"key": keyStr, "time": time})
 	get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text) + 1)
-	print(keyStr + ": " + str(time) + "s")
+	#print(keyStr + ": " + str(time) + "s")
 
 func getSub(timeMs):
 	var sub = 4
