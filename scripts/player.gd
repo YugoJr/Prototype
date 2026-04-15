@@ -6,5 +6,5 @@ func _physics_process(delta: float) -> void:
 	var boxLeft = global.centerViewport.x - 80
 	var boxRight = global.centerViewport.x + 80
 	var targetX = lerp(boxLeft, boxRight, mouseRatio)
-	position.x = lerp(position.x, targetX, 0.3)
+	position.x = lerp(position.x, targetX, 1)
 	rotation = (position.x - global.centerViewport.x) / 360

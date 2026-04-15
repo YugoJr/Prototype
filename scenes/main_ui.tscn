@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bnpkfp3pi4wix"]
 
-[ext_resource type="Texture2D" uid="uid://duq7tvm047d1e" path="res://assets/background/coa9.jpeg" id="1_fnul3"]
+[ext_resource type="Texture2D" uid="uid://d3hmwidohdq8p" path="res://assets/background/bg2.jpeg" id="1_fnul3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnul3"]
 bg_color = Color(0, 0, 0, 0.5058824)
@@ -68,3 +68,12 @@ offset_bottom = 350.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fnul3")
+
+[node name="Label" type="Label" parent="." unique_id=257748594]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 16.0
+offset_right = 225.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 36
+text = "LEVELNAME"
