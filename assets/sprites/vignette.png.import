@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcle1xpocssje"
-path="res://.godot/imported/Motion Control Font.png-769f3938f4b9cd3d2de9b7ef625243be.ctex"
+uid="uid://beioan5bymnv6"
+path="res://.godot/imported/vignette.png-7442dbcbcaf97b3e6011efd7dbb4745b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fonts/motion-control/Motion Control Font.png"
-dest_files=["res://.godot/imported/Motion Control Font.png-769f3938f4b9cd3d2de9b7ef625243be.ctex"]
+source_file="res://assets/sprites/vignette.png"
+dest_files=["res://.godot/imported/vignette.png-7442dbcbcaf97b3e6011efd7dbb4745b.ctex"]
 
 [params]
 

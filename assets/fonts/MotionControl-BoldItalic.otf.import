@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cbhcl4fq6k6x2"
-path="res://.godot/imported/MotionControl-BoldItalic.otf-f5b0a2382361fd21ba20506152727d99.fontdata"
+path="res://.godot/imported/MotionControl-BoldItalic.otf-b8423269579ee10abeea4a9e7cd8251f.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/motion-control/MotionControl-BoldItalic.otf"
-dest_files=["res://.godot/imported/MotionControl-BoldItalic.otf-f5b0a2382361fd21ba20506152727d99.fontdata"]
+source_file="res://assets/fonts/MotionControl-BoldItalic.otf"
+dest_files=["res://.godot/imported/MotionControl-BoldItalic.otf-b8423269579ee10abeea4a9e7cd8251f.fontdata"]
 
 [params]
 
