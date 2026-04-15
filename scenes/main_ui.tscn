@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bnpkfp3pi4wix"]
 
-[ext_resource type="Texture2D" uid="uid://d3hmwidohdq8p" path="res://assets/background/bg2.jpeg" id="1_fnul3"]
+[ext_resource type="Texture2D" uid="uid://cwlkk1tlejn0n" path="res://assets/background/azul.jpg" id="1_j6a7c"]
+[ext_resource type="FontFile" uid="uid://c7yusr7jjg4f5" path="res://assets/fonts/LilitaOne-Regular.ttf" id="2_scoti"]
+[ext_resource type="Texture2D" uid="uid://c1kqab3fwb0lm" path="res://assets/HP_bar/scorebar_resize.png" id="3_i1gbh"]
+[ext_resource type="Texture2D" uid="uid://cac1fr8yr30s5" path="res://assets/HP_bar/HP_bar.png" id="4_46p8p"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnul3"]
 bg_color = Color(0, 0, 0, 0.5058824)
@@ -14,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="background" type="TextureRect" parent="." unique_id=1951291921]
-self_modulate = Color(0.10249352, 0.10249352, 0.10249352, 1)
+self_modulate = Color(0.5386024, 0.5386024, 0.53860235, 1)
 z_index = -1
 layout_mode = 1
 anchors_preset = 15
@@ -22,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_fnul3")
+texture = ExtResource("1_j6a7c")
 expand_mode = 1
 
 [node name="playerLines" type="Node" parent="." unique_id=1938424199]
@@ -69,11 +72,46 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_fnul3")
 
-[node name="Label" type="Label" parent="." unique_id=257748594]
+[node name="LevelName" type="Label" parent="." unique_id=257748594]
 layout_mode = 0
 offset_left = 18.0
 offset_top = 16.0
-offset_right = 225.0
-offset_bottom = 66.0
-theme_override_font_sizes/font_size = 36
-text = "LEVELNAME"
+offset_right = 354.0
+offset_bottom = 172.0
+theme_override_font_sizes/font_size = 20
+text = "LEVELNAME:
+Heroes don't asked
+question"
+
+[node name="Combo" type="Label" parent="." unique_id=1803723797]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 581.0
+offset_right = 349.0
+offset_bottom = 737.0
+theme_override_fonts/font = ExtResource("2_scoti")
+theme_override_font_sizes/font_size = 46
+text = "0x"
+
+[node name="Accuracy" type="Label" parent="." unique_id=1148076145]
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 45.0
+offset_right = 1364.0
+offset_bottom = 201.0
+theme_override_fonts/font = ExtResource("2_scoti")
+theme_override_font_sizes/font_size = 46
+text = "100%"
+
+[node name="HP_Bar" type="TextureProgressBar" parent="." unique_id=546290183]
+layout_mode = 1
+offset_left = 705.0
+offset_top = 622.0
+offset_right = 1589.0
+offset_bottom = 744.0
+rotation = -1.5707964
+scale = Vector2(0.4, 0.4)
+value = 100.0
+texture_under = ExtResource("3_i1gbh")
+texture_progress = ExtResource("4_46p8p")
+texture_progress_offset = Vector2(-60, -3)
