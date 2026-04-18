@@ -21,6 +21,10 @@ z_index = -1
 z_as_relative = false
 metadata/_edit_use_anchors_ = true
 
+[node name="judgement" parent="canvasNodes/canvasMain/mainUI" index="8" unique_id=1103079658]
+offset_top = -297.0
+offset_bottom = -88.859985
+
 [node name="canvasPause" type="CanvasLayer" parent="canvasNodes" unique_id=1107112137]
 
 [node name="pause" parent="canvasNodes/canvasPause" unique_id=1922036458 instance=ExtResource("2_pu3yx")]

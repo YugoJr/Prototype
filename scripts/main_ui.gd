@@ -6,6 +6,7 @@ func _process(delta: float) -> void:
 	$hpBar.value = global.playerHP
 	var currentScore = int(round(lerp(int($score.text), global.score, 0.75)))
 	$score.text = "%010d" % currentScore
+	$accuracy.text = str(global.accuracy) + "%"
 	
 func setKeys():
 	var children = $playerLines.get_children()

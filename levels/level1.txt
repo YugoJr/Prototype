@@ -1,32 +1,42 @@
 [
 	{
-		"key": "keyU",
-		"pos": 3,
-		"time": 6.74
+		"key": "keyE",
+		"pos": 1,
+		"time": 0.85
 	},
 	{
-		"key": "keyI",
-		"pos": 4,
-		"time": 7.47
+		"key": "keyE",
+		"pos": 1,
+		"time": 1.14
 	},
 	{
-		"key": "keyU",
-		"pos": 3,
-		"time": 8.34
+		"key": "keyE",
+		"pos": 1,
+		"time": 1.41
 	},
 	{
-		"key": "keyI",
-		"pos": 4,
-		"time": 9.28
+		"key": "keyE",
+		"pos": 1,
+		"time": 1.71
 	},
 	{
-		"key": "keyU",
-		"pos": 3,
-		"time": 10.16
+		"key": "keyR",
+		"pos": 2,
+		"time": 2.61
 	},
 	{
-		"key": "keyI",
-		"pos": 4,
-		"time": 11.02
+		"key": "keyR",
+		"pos": 2,
+		"time": 2.85
+	},
+	{
+		"key": "keyR",
+		"pos": 2,
+		"time": 3.07
+	},
+	{
+		"key": "keyR",
+		"pos": 2,
+		"time": 3.32
 	}
 ]

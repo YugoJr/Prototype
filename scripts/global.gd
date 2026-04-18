@@ -19,6 +19,7 @@ var levelLength = 137
 var playerHP = 15.0
 var score = 0
 var noteSpeed = 1.0
+var accuracy = 0
 
 var currentKeys = [0, 1, 6, 7]
 
