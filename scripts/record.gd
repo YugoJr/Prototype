@@ -42,7 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				print(">>> TERMINATING RECORDING")
 				get_tree().quit()
 
-	var time := float(getSub($music.get_playback_position()))
+	var time := float(getSub($music.get_playback_position() + AudioServer.get_time_since_last_mix()))
 
 	for action in note_map.keys():
 		if event.is_action_pressed(action):
@@ -56,7 +56,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		rightShift = event.is_pressed()
 
 func _process(_delta: float) -> void:
-	$CanvasLayer/recordUI/time.text = "Time Elapsed: " +  getSub($music.get_playback_position()) + "s\nTotal Notes: " + str(totalNotes)
+	$CanvasLayer/recordUI/time.text = "Time Elapsed: " +  getSub($music.get_playback_position() + AudioServer.get_time_since_last_mix()) + "s\nTotal Notes: " + str(totalNotes)
 	updateShift()
 
 

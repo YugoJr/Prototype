@@ -19,7 +19,6 @@ boot_splash/use_filter=false
 [autoload]
 
 global="*uid://cig7shvqnd7hl"
-Fade="uid://dwy5ihqyhtcfv"
 
 [display]
 

@@ -27,14 +27,13 @@ metadata/_edit_use_anchors_ = true
 modulate = Color(1, 1, 1, 0)
 
 [node name="fade" parent="canvasNodes/canvasPause" unique_id=20099342 instance=ExtResource("4_rt2n2")]
-self_modulate = Color(1, 1, 1, 0)
 mouse_filter = 2
 script = ExtResource("5_c16ls")
 
 [node name="player" parent="." unique_id=210516738 instance=ExtResource("1_pw63i")]
 position = Vector2(576, 529)
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=372020352]
+[node name="music" type="AudioStreamPlayer" parent="." unique_id=372020352]
 stream = ExtResource("3_7ykc4")
 autoplay = true
 
