@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://c5r7w4k6ehykd"]
+
+[ext_resource type="Script" uid="uid://cjva0nkh4ne7q" path="res://scenes/note.gd" id="1_1bnk6"]
+[ext_resource type="Texture2D" uid="uid://c3hp2rj2gxqod" path="res://assets/Notes/mania-noteS.png" id="1_t3yvt"]
+
+[node name="note" type="Node2D" unique_id=472439100]
+script = ExtResource("1_1bnk6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1072998573]
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("1_t3yvt")

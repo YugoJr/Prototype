@@ -6,8 +6,8 @@
 [ext_resource type="FontFile" uid="uid://c7yusr7jjg4f5" path="res://assets/fonts/LilitaOne-Regular.ttf" id="2_scoti"]
 [ext_resource type="FontFile" uid="uid://uevkn8vsq43x" path="res://assets/fonts/MotionControl-Bold.otf" id="3_46p8p"]
 [ext_resource type="Texture2D" uid="uid://c1kqab3fwb0lm" path="res://assets/HP_bar/scorebar_resize.png" id="3_i1gbh"]
-[ext_resource type="Texture2D" uid="uid://ot732j05ogiy" path="res://assets/Notes/mania-note1.png" id="3_okuri"]
 [ext_resource type="Texture2D" uid="uid://cac1fr8yr30s5" path="res://assets/HP_bar/HP_bar.png" id="4_46p8p"]
+[ext_resource type="Texture2D" uid="uid://c3hp2rj2gxqod" path="res://assets/Notes/mania-noteS.png" id="4_r8eje"]
 [ext_resource type="Texture2D" uid="uid://b0nyiqtm31maw" path="res://assets/sprites/circle.png" id="5_r8eje"]
 [ext_resource type="Texture2D" uid="uid://ojusg6eb4h10" path="res://assets/sprites/progress.png" id="8_okuri"]
 
@@ -81,7 +81,7 @@ offset_bottom = 315.99994
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3199994, 0.3199994)
-texture = ExtResource("3_okuri")
+texture = ExtResource("4_r8eje")
 
 [node name="circle" type="TextureRect" parent="playerLines/line1" unique_id=1749127638]
 self_modulate = Color(1, 1, 1, 0.514)
@@ -151,7 +151,7 @@ offset_bottom = 315.99994
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3199994, 0.3199994)
-texture = ExtResource("3_okuri")
+texture = ExtResource("4_r8eje")
 
 [node name="circle" type="TextureRect" parent="playerLines/line2" unique_id=462460386]
 self_modulate = Color(1, 1, 1, 0.514)
@@ -221,7 +221,7 @@ offset_bottom = 315.99994
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3199994, 0.3199994)
-texture = ExtResource("3_okuri")
+texture = ExtResource("4_r8eje")
 
 [node name="circle" type="TextureRect" parent="playerLines/line3" unique_id=933563585]
 self_modulate = Color(1, 1, 1, 0.514)
@@ -291,7 +291,7 @@ offset_bottom = 315.99994
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.3199994, 0.3199994)
-texture = ExtResource("3_okuri")
+texture = ExtResource("4_r8eje")
 
 [node name="circle" type="TextureRect" parent="playerLines/line4" unique_id=1057143094]
 self_modulate = Color(1, 1, 1, 0.514)

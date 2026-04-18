@@ -8,18 +8,18 @@ var rightShift = false
 
 var recording = []
 var note_map = {
-		"noteE": [0, "left"],
-		"noteR": [1, "left"],
-		"noteD": [2, "left"],
-		"noteF": [3, "left"],
-		"noteC": [4, "left"],
-		"noteV": [5, "left"],
-		"noteU": [6, "right"],
-		"noteI": [7, "right"],
-		"noteJ": [8, "right"],
-		"noteK": [9, "right"],
-		"noteM": [10, "right"],
-		"note,": [11, "right"],
+		"noteE": [0, "left", 1],
+		"noteR": [1, "left", 2],
+		"noteD": [2, "left", 1],
+		"noteF": [3, "left", 2],
+		"noteC": [4, "left", 1],
+		"noteV": [5, "left", 2],
+		"noteU": [6, "right", 3],
+		"noteI": [7, "right", 4],
+		"noteJ": [8, "right", 3],
+		"noteK": [9, "right", 4],
+		"noteM": [10, "right", 3],
+		"note,": [11, "right", 4],
 	}
 
 func _ready() -> void:
@@ -47,7 +47,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	for action in note_map.keys():
 		if event.is_action_pressed(action):
 			var data = note_map[action]
-			saveNote(global.convertToKeyStr(data[0]), time, data[1])
+			saveNote(global.convertToKeyStr(data[0]), time, data[1], data[2])
 			break
 
 	if event.is_action("shiftLEFT"):
@@ -60,12 +60,12 @@ func _process(_delta: float) -> void:
 	updateShift()
 
 
-func saveNote(keyStr, time, section):
+func saveNote(keyStr, time, section, keyPos):
 	totalNotes += 1
 	if (leftShift and section == "left") or (rightShift and section == "right"):
-		recording.append({"key": keyStr + "shift", "time": time})
+		recording.append({"key": keyStr + "shift", "time": time, "pos": keyPos})
 	else:
-		recording.append({"key": keyStr, "time": time})
+		recording.append({"key": keyStr, "time": time, "pos": keyPos})
 	get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text) + 1)
 	#print(keyStr + ": " + str(time) + "s")
 

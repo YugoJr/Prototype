@@ -18,6 +18,7 @@ var levelProgress = 0
 var levelLength = 137
 var playerHP = 15.0
 var score = 0
+var noteSpeed = 1.0
 
 var currentKeys = [0, 1, 6, 7]
 
@@ -25,7 +26,8 @@ var currentKeys = [0, 1, 6, 7]
 func _ready() -> void:
 	viewportSize = get_viewport_rect().size
 	centerViewport = viewportSize / 2
-	get_tree().current_scene.find_child("mainUI").setKeys()
+	if get_tree().current_scene.name == "main_scene":
+		get_tree().current_scene.find_child("mainUI").setKeys()
 
 var tween: Tween
 
