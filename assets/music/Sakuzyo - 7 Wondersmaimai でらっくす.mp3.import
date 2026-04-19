@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cicnabh37mlvo"
+path="res://.godot/imported/Sakuzyo - 7 Wondersmaimai でらっくす.mp3-c2e2d1aa7646836b91c6a9b60c2822c9.mp3str"
+
+[deps]
+
+source_file="res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3"
+dest_files=["res://.godot/imported/Sakuzyo - 7 Wondersmaimai でらっくす.mp3-c2e2d1aa7646836b91c6a9b60c2822c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

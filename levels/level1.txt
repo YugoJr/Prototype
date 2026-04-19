@@ -3,372 +3,240 @@
 		"id": 1,
 		"key": "keyE",
 		"pos": 1,
-		"time": 6.91
+		"time": 3.78
 	},
 	{
 		"id": 2,
-		"key": "keyU",
-		"pos": 3,
-		"time": 7.23
+		"key": "keyR",
+		"pos": 2,
+		"time": 3.93
 	},
 	{
 		"id": 3,
-		"key": "keyR",
-		"pos": 2,
-		"time": 7.56
+		"key": "keyU",
+		"pos": 3,
+		"time": 4.13
 	},
 	{
 		"id": 4,
 		"key": "keyI",
 		"pos": 4,
-		"time": 7.91
+		"time": 4.24
 	},
 	{
 		"id": 5,
 		"key": "keyE",
 		"pos": 1,
-		"time": 8.23
+		"time": 4.66
 	},
 	{
 		"id": 6,
-		"key": "keyU",
-		"pos": 3,
-		"time": 8.65
+		"key": "keyR",
+		"pos": 2,
+		"time": 4.83
 	},
 	{
 		"id": 7,
-		"key": "keyE",
-		"pos": 1,
-		"time": 8.76
+		"key": "keyU",
+		"pos": 3,
+		"time": 5.3
 	},
 	{
 		"id": 8,
-		"key": "keyU",
-		"pos": 3,
-		"time": 8.99
+		"key": "keyE",
+		"pos": 1,
+		"time": 6.1
 	},
 	{
 		"id": 9,
-		"key": "keyE",
-		"pos": 1,
-		"time": 9.16
+		"key": "keyI",
+		"pos": 4,
+		"time": 6.28
 	},
 	{
 		"id": 10,
-		"key": "keyU",
-		"pos": 3,
-		"time": 9.33
+		"key": "keyR",
+		"pos": 2,
+		"time": 6.48
 	},
 	{
 		"id": 11,
-		"key": "keyR",
-		"pos": 2,
-		"time": 9.87
+		"key": "keyU",
+		"pos": 3,
+		"time": 6.67
 	},
 	{
 		"id": 12,
 		"key": "keyE",
 		"pos": 1,
-		"time": 10.16
+		"time": 7.12
 	},
 	{
 		"id": 13,
-		"key": "keyU",
-		"pos": 3,
-		"time": 10.5
+		"key": "keyI",
+		"pos": 4,
+		"time": 7.33
 	},
 	{
 		"id": 14,
-		"key": "keyI",
-		"pos": 4,
-		"time": 10.84
+		"key": "keyR",
+		"pos": 2,
+		"time": 7.83
 	},
 	{
 		"id": 15,
-		"key": "keyE",
-		"pos": 1,
-		"time": 11.32
+		"key": "keyU",
+		"pos": 3,
+		"time": 8.57
 	},
 	{
 		"id": 16,
-		"key": "keyU",
-		"pos": 3,
-		"time": 11.46
+		"key": "keyE",
+		"pos": 1,
+		"time": 8.73
 	},
 	{
 		"id": 17,
-		"key": "keyE",
-		"pos": 1,
-		"time": 11.65
+		"key": "keyI",
+		"pos": 4,
+		"time": 8.89
 	},
 	{
 		"id": 18,
-		"key": "keyU",
-		"pos": 3,
-		"time": 11.86
+		"key": "keyR",
+		"pos": 2,
+		"time": 9.16
 	},
 	{
 		"id": 19,
-		"key": "keyE",
-		"pos": 1,
-		"time": 11.97
+		"key": "keyU",
+		"pos": 3,
+		"time": 9.67
 	},
 	{
 		"id": 20,
-		"key": "keyI",
-		"pos": 4,
-		"time": 12.48
+		"key": "keyE",
+		"pos": 1,
+		"time": 9.88
 	},
 	{
 		"id": 21,
-		"key": "keyR",
-		"pos": 2,
-		"time": 12.83
+		"key": "keyI",
+		"pos": 4,
+		"time": 10.36
 	},
 	{
 		"id": 22,
-		"key": "keyU",
-		"pos": 3,
-		"time": 13.19
+		"key": "keyR",
+		"pos": 2,
+		"time": 10.75
 	},
 	{
 		"id": 23,
-		"key": "keyR",
-		"pos": 2,
-		"time": 13.48
+		"key": "keyU",
+		"pos": 3,
+		"time": 10.95
 	},
 	{
 		"id": 24,
-		"key": "keyU",
-		"pos": 3,
-		"time": 14.09
+		"key": "keyE",
+		"pos": 1,
+		"time": 11.06
 	},
 	{
 		"id": 25,
-		"key": "keyE",
-		"pos": 1,
-		"time": 14.21
+		"key": "keyI",
+		"pos": 4,
+		"time": 11.22
 	},
 	{
 		"id": 26,
-		"key": "keyU",
-		"pos": 3,
-		"time": 14.45
+		"key": "keyR",
+		"pos": 2,
+		"time": 11.39
 	},
 	{
 		"id": 27,
-		"key": "keyE",
-		"pos": 1,
-		"time": 14.58
+		"key": "keyU",
+		"pos": 3,
+		"time": 11.57
 	},
 	{
 		"id": 28,
-		"key": "keyU",
-		"pos": 3,
-		"time": 14.8
+		"key": "keyI",
+		"pos": 4,
+		"time": 11.57
 	},
 	{
 		"id": 29,
 		"key": "keyR",
 		"pos": 2,
-		"time": 15.23
+		"time": 12.16
 	},
 	{
 		"id": 30,
-		"key": "keyI",
-		"pos": 4,
-		"time": 15.58
+		"key": "keyE",
+		"pos": 1,
+		"time": 12.18
 	},
 	{
 		"id": 31,
 		"key": "keyU",
 		"pos": 3,
-		"time": 15.9
+		"time": 12.36
 	},
 	{
 		"id": 32,
 		"key": "keyI",
 		"pos": 4,
-		"time": 16.27
+		"time": 12.37
 	},
 	{
 		"id": 33,
 		"key": "keyR",
 		"pos": 2,
-		"time": 16.78
+		"time": 12.79
 	},
 	{
 		"id": 34,
-		"key": "keyU",
-		"pos": 3,
-		"time": 16.96
+		"key": "keyI",
+		"pos": 4,
+		"time": 12.96
 	},
 	{
 		"id": 35,
-		"key": "keyR",
-		"pos": 2,
-		"time": 17.15
+		"key": "keyE",
+		"pos": 1,
+		"time": 13.11
 	},
 	{
 		"id": 36,
 		"key": "keyU",
 		"pos": 3,
-		"time": 17.35
+		"time": 13.27
 	},
 	{
 		"id": 37,
 		"key": "keyR",
 		"pos": 2,
-		"time": 17.49
+		"time": 13.41
 	},
 	{
 		"id": 38,
 		"key": "keyI",
 		"pos": 4,
-		"time": 17.95
+		"time": 13.54
 	},
 	{
 		"id": 39,
 		"key": "keyE",
 		"pos": 1,
-		"time": 18.23
+		"time": 13.71
 	},
 	{
 		"id": 40,
 		"key": "keyU",
 		"pos": 3,
-		"time": 18.56
-	},
-	{
-		"id": 41,
-		"key": "keyI",
-		"pos": 4,
-		"time": 18.94
-	},
-	{
-		"id": 42,
-		"key": "keyR",
-		"pos": 2,
-		"time": 19.44
-	},
-	{
-		"id": 43,
-		"key": "keyU",
-		"pos": 3,
-		"time": 19.44
-	},
-	{
-		"id": 44,
-		"key": "keyE",
-		"pos": 1,
-		"time": 19.44
-	},
-	{
-		"id": 45,
-		"key": "keyI",
-		"pos": 4,
-		"time": 19.44
-	},
-	{
-		"id": 46,
-		"key": "keyR",
-		"pos": 2,
-		"time": 19.93
-	},
-	{
-		"id": 47,
-		"key": "keyE",
-		"pos": 1,
-		"time": 19.93
-	},
-	{
-		"id": 48,
-		"key": "keyR",
-		"pos": 2,
-		"time": 20.47
-	},
-	{
-		"id": 49,
-		"key": "keyE",
-		"pos": 1,
-		"time": 20.47
-	},
-	{
-		"id": 50,
-		"key": "keyU",
-		"pos": 3,
-		"time": 20.98
-	},
-	{
-		"id": 51,
-		"key": "keyI",
-		"pos": 4,
-		"time": 20.98
-	},
-	{
-		"id": 52,
-		"key": "keyU",
-		"pos": 3,
-		"time": 21.46
-	},
-	{
-		"id": 53,
-		"key": "keyI",
-		"pos": 4,
-		"time": 21.77
-	},
-	{
-		"id": 54,
-		"key": "keyU",
-		"pos": 3,
-		"time": 22.1
-	},
-	{
-		"id": 55,
-		"key": "keyE",
-		"pos": 1,
-		"time": 22.4
-	},
-	{
-		"id": 56,
-		"key": "keyU",
-		"pos": 3,
-		"time": 22.74
-	},
-	{
-		"id": 57,
-		"key": "keyR",
-		"pos": 2,
-		"time": 23.02
-	},
-	{
-		"id": 58,
-		"key": "keyI",
-		"pos": 4,
-		"time": 23.28
-	},
-	{
-		"id": 59,
-		"key": "keyI",
-		"pos": 4,
-		"time": 23.57
-	},
-	{
-		"id": 60,
-		"key": "keyI",
-		"pos": 4,
-		"time": 23.91
-	},
-	{
-		"id": 61,
-		"key": "keyI",
-		"pos": 4,
-		"time": 24.2
-	},
-	{
-		"id": 62,
-		"key": "keyI",
-		"pos": 4,
-		"time": 24.5
+		"time": 14.06
 	}
 ]

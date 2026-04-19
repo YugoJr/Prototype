@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ixmrny1hcdmt" path="res://scripts/record.gd" id="1_dgygn"]
 [ext_resource type="PackedScene" uid="uid://bv3dwqp0yq6lh" path="res://scenes/record_ui.tscn" id="1_oih1x"]
-[ext_resource type="AudioStream" uid="uid://dl1wyo3sht1tv" path="res://assets/music/level1.mp3" id="2_3okdn"]
+[ext_resource type="AudioStream" uid="uid://cicnabh37mlvo" path="res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3" id="3_dgygn"]
 
 [node name="recordScene" type="Node2D" unique_id=1520327312]
 script = ExtResource("1_dgygn")
@@ -12,4 +12,4 @@ script = ExtResource("1_dgygn")
 [node name="recordUI" parent="CanvasLayer" unique_id=1719243649 instance=ExtResource("1_oih1x")]
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=1366393674]
-stream = ExtResource("2_3okdn")
+stream = ExtResource("3_dgygn")

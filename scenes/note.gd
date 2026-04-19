@@ -4,7 +4,7 @@ var note_time = 0.0
 var id = 0
 
 const START_Y = -100.0
-const HIT_Y   = 600.0
+const HIT_Y   = 580.0
 const BASE_TRAVEL_TIME = 1.5
 
 func setup(data):
