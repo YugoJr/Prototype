@@ -72,7 +72,7 @@ func check_timing(lane_pressed: int):
 		# Search the group instead of all children
 		for note_node in get_tree().get_nodes_in_group("active_notes"):
 			if int(note_node.id) == int(closest_note["id"]):
-				print("Destroying Note ID: ", closest_note["id"])
+				#print("Destroying Note ID: ", closest_note["id"])
 				note_node.queue_free()
 				break
 	else:
@@ -80,21 +80,46 @@ func check_timing(lane_pressed: int):
 
 func judge_hit(diff: float):
 	var judgement: String = ""
+	var base_points: int = 0
+	
+	# 1. Determine Judgement and Base Points
 	if diff <= PERFECT_WINDOW:
 		judgement = "PERFECT"
+		base_points = 1000
 		global.accuracyScore += 1.0
+		global.combo += 1
 	elif diff <= GREAT_WINDOW:
 		judgement = "GREAT"
+		base_points = 500
 		global.accuracyScore += 0.8
+		global.combo += 1
 	elif diff <= GOOD_WINDOW:
 		judgement = "GOOD"
+		base_points = 200
 		global.accuracyScore += 0.5
+		global.combo += 1
 	else:
 		judgement = "BAD"
+		base_points = 50
+		global.combo = 0 # Break combo on BAD
+	
+	# 2. Calculate Score with Multiplier
+	# (Combo bonus: every 10 combo adds 10% to score, capped at 2x)
+	var multiplier = clamp(1.0 + (global.combo / 100.0), 1.0, 2.0)
+	global.score += int(base_points * multiplier)
+	global.playerHP += base_points / 750
+ 
+
+	# 4. Spawn Visuals
 	var textClone = judgeTextScene.instantiate()
 	add_child(textClone)
 	textClone.position = global.centerViewport
 	textClone.get_node("Label").text = judgement
+	
+	# Optional: Color the text
+	if judgement == "PERFECT": textClone.modulate = Color.GOLD
+	elif judgement == "GREAT": textClone.modulate = Color.CYAN
+	elif judgement == "BAD": textClone.modulate = Color.RED
 
 func get_song_time() -> float:
 	return $music.get_playback_position() + AudioServer.get_time_since_last_mix()
@@ -106,7 +131,11 @@ func _physics_process(_delta: float) -> void:
 	for note in levelData:
 		if not note["resolved"] and (current_song_time - note["time"]) > MISS_WINDOW:
 			note["resolved"] = true
-			global.resolvedNotes += 1
+			global.resolvedNotes += 1 # Counts toward accuracy denominator
+			global.combo = 0           # Combo breaks on miss
+			
+			# Recalculate accuracy because resolvedNotes changed
+			
 			print("AUTO MISS (ID: ", note["id"], ")")
 
 func handle_pause():

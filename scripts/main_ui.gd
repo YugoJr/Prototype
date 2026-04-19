@@ -10,6 +10,7 @@ func _process(delta: float) -> void:
 	global.accuracy = (global.accuracyScore / global.resolvedNotes) * 100.0
 	visual_accuracy = lerp(visual_accuracy, global.accuracy, 0.75)
 	$accuracy.text = "%.2f%%" % visual_accuracy
+	$combo.text = str(global.combo) + "x"
 	
 func setKeys():
 	var children = $playerLines.get_children()

@@ -22,6 +22,7 @@ var noteSpeed = 1.0
 var accuracy = 0
 var accuracyScore = 1
 var resolvedNotes = 1
+var combo = 0
 
 var currentKeys = [0, 1, 6, 7]
 
@@ -53,4 +54,5 @@ func resetData():
 	score = 0
 	accuracyScore = 1
 	resolvedNotes = 1
+	combo = 0
 	get_tree().current_scene.find_child("mainUI").setKeys()
