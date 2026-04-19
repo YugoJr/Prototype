@@ -20,6 +20,8 @@ var playerHP = 15.0
 var score = 0
 var noteSpeed = 1.0
 var accuracy = 0
+var accuracyScore = 1
+var resolvedNotes = 1
 
 var currentKeys = [0, 1, 6, 7]
 
@@ -48,4 +50,7 @@ func resetData():
 	levelProgress = 0
 	playerHP = 15.0
 	currentKeys = [0, 1, 6, 7]
+	score = 0
+	accuracyScore = 1
+	resolvedNotes = 1
 	get_tree().current_scene.find_child("mainUI").setKeys()

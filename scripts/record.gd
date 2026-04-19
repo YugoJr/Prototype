@@ -63,9 +63,9 @@ func _process(_delta: float) -> void:
 func saveNote(keyStr, time, section, keyPos):
 	totalNotes += 1
 	if (leftShift and section == "left") or (rightShift and section == "right"):
-		recording.append({"key": keyStr + "shift", "time": time, "pos": keyPos})
+		recording.append({"key": keyStr + "shift", "time": time, "pos": keyPos, "id": totalNotes})
 	else:
-		recording.append({"key": keyStr, "time": time, "pos": keyPos})
+		recording.append({"key": keyStr, "time": time, "pos": keyPos, "id": totalNotes})
 	get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text = str(int(get_node("CanvasLayer/recordUI/noteGroup/" + section + "/" + keyStr + "/count").text) + 1)
 	#print(keyStr + ": " + str(time) + "s")
 

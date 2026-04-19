@@ -1,4 +1,5 @@
 extends Control
+var visual_accuracy: float = 100.0
 
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:
@@ -6,7 +7,9 @@ func _process(delta: float) -> void:
 	$hpBar.value = global.playerHP
 	var currentScore = int(round(lerp(int($score.text), global.score, 0.75)))
 	$score.text = "%010d" % currentScore
-	$accuracy.text = str(global.accuracy) + "%"
+	global.accuracy = (global.accuracyScore / global.resolvedNotes) * 100.0
+	visual_accuracy = lerp(visual_accuracy, global.accuracy, 0.75)
+	$accuracy.text = "%.2f%%" % visual_accuracy
 	
 func setKeys():
 	var children = $playerLines.get_children()
@@ -35,3 +38,12 @@ func flash(ui):
 	tween.tween_property(bar, "modulate", Color(1, 1, 1, 1), 0.3)\
 		.set_trans(Tween.TRANS_CUBIC)\
 		.set_ease(Tween.EASE_OUT)
+
+func getSub(accu):
+	var sub = 4
+	if accu > 10.0:
+		sub = 5
+	if accu > 100.0:
+		sub = 6
+		
+	return str(accu).substr(0, sub)
