@@ -30,8 +30,3 @@ func play_note_bop():
 	tween.tween_property(self, "zoom", base_zoom, return_duration) \
 		.set_trans(Tween.TRANS_BACK) \
 		.set_ease(Tween.EASE_OUT)
-
-## EXAMPLE USAGE (For testing purposes)
-func _input(event):
-	if event.is_action_pressed("ui_accept"): # Press Space/Enter to test
-		play_note_bop()

@@ -1,6 +1,10 @@
 extends Control
 var visual_accuracy: float = 100.0
 
+func _ready() -> void:
+	await get_tree().process_frame
+	$levelName.text = "[rainbow freq=0.2 sat=0.8 val=1]" + global.levelData.name + "[/rainbow]"
+
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:
 	$score/progress.value = clamp((global.levelProgress / global.levelLength) * 100, 0, 100)
@@ -10,7 +14,7 @@ func _process(delta: float) -> void:
 	global.accuracy = (global.accuracyScore / global.resolvedNotes) * 100.0
 	visual_accuracy = lerp(visual_accuracy, global.accuracy, 0.75)
 	$accuracy.text = "%.2f%%" % visual_accuracy
-	$combo.text = str(global.combo) + "x" + str(global.damageCombo)
+	$combo.text = str(global.combo) + "x"
 	
 func setKeys():
 	var children = $playerLines.get_children()

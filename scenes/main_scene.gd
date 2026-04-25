@@ -5,7 +5,7 @@ var levelData = []
 var noteScene = preload("res://scenes/note.tscn")
 var judgeTextScene = preload("res://scenes/judge_text.tscn")
 
-const PERFECT_FRAME_WINDOW = 0.00067
+const PERFECT_FRAME_WINDOW = 0.007
 const CRITICAL_PERFECT_WINDOW = 0.01
 const PERFECT_WINDOW = 0.05
 const GREAT_WINDOW   = 0.10
@@ -96,19 +96,19 @@ func judge_hit(diff: float, pos):
 		base_points = 2000
 		global.accuracyScore += 1.0
 		global.combo += 1
-		global.damageCombo -= 0.7
+		global.damageCombo -= 0.6
 	elif diff <= PERFECT_WINDOW:
 		judgement = "PERFECT"
 		base_points = 1000
 		global.accuracyScore += 1.0
 		global.combo += 1
-		global.damageCombo -= 0.3
+		global.damageCombo -= 0.1
 	elif diff <= GREAT_WINDOW:
 		judgement = "GREAT"
 		base_points = 500
 		global.accuracyScore += 0.8
 		global.combo += 1
-		global.damageCombo -= 0.1
+		global.damageCombo -= 0.03
 	elif diff <= GOOD_WINDOW:
 		judgement = "GOOD"
 		base_points = 200
@@ -118,13 +118,12 @@ func judge_hit(diff: float, pos):
 		judgement = "BAD"
 		base_points = 50
 		global.combo = 0 # Break combo on BAD
-		global.playerHP -= 2.0 * global.damageCombo
-		global.damageCombo = global.damageCombo * 1.4
+		global.damagePlayer()
 	
 	# 2. Calculate Score with Multiplier
 	# (Combo bonus: every 10 combo adds 10% to score, capped at 2x)
 	$mainCamera.play_note_bop()
-	var multiplier = clamp(1.0 + (global.combo / 100.0), 1.0, 2.0)
+	var multiplier = clamp(1.0 + (global.combo / 50.0), 1.0, 2.5)
 	global.score += int(base_points * multiplier)
 	global.playerHP += base_points / 750
  
@@ -145,7 +144,7 @@ func get_song_time() -> float:
 	return $music.get_playback_position() + AudioServer.get_time_since_last_mix()
 
 func _physics_process(_delta: float) -> void:
-	global.damageCombo = clamp(global.damageCombo, 0.8, 4.0)
+	global.damageCombo = clamp(global.damageCombo, 0.8, 4.5)
 	var current_song_time = get_song_time()
 	global.levelProgress = current_song_time
 	
@@ -162,8 +161,7 @@ func _physics_process(_delta: float) -> void:
 			textClone.position.y = 500
 			textClone.get_node("Label").text = "MISS"
 			textClone.modulate = Color.RED
-			global.playerHP -= 2.5 * global.damageCombo
-			global.damageCombo = global.damageCombo * 1.7
+			global.damagePlayer()
 			print("AUTO MISS (ID: ", note["id"], ")")
 
 func handle_pause():

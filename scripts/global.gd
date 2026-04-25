@@ -28,8 +28,40 @@ var resolvedNotes = 1
 var combo = 0
 var damageCombo = 1.0
 
+var levelData = {
+	"name": "7 Wondersmaimai でらっくす",
+	"author": "Sakuzyo",
+	"bpm": 40,
+	"musicPath": "res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3",
+	"bgPath": "res://assets/background/azul.jpg",
+	"difficulty": 3.5,
+	"baseSpeed": 1.0,
+	"canChangeSpeed?": true,
+	"minimumCharacterLevel": 1,
+	"enemyHP": 3000,
+	"stats": {
+		"scoreMult": 1.0,
+		"baseDamage": 4,
+		"damageMult": 1.0,
+		"regenMult": 1.0
+	},
+	"judgement": {
+		"CRITICAL_PERFECT_WINDOW": 0.01,
+		"PERFECT_WINDOW": 0.05,
+		"GREAT_WINDOW": 0.10,
+		"GOOD_WINDOW": 0.15,
+		"MISS_WINDOW": 0.3
+	},
+	"noteData": [],
+	"bulletData": [],
+	"visualData": []
+}
+
 var currentKeys = [0, 1, 6, 7]
 
+func damagePlayer():
+	global.playerHP -= 4.5 * global.damageCombo
+	global.damageCombo = global.damageCombo * 1.3
 
 func _ready() -> void:
 	viewportSize = get_viewport_rect().size
