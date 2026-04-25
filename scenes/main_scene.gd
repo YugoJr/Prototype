@@ -15,6 +15,7 @@ const MISS_WINDOW    = 0.3
 const NOTE_TRAVEL_TIME = 1.5
 
 func _ready():
+	print(str(DisplayServer.screen_get_size()))
 	levelData = loadChart("res://levels/level1.txt")
 	for note in levelData:
 		note["resolved"] = false

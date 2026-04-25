@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://byabdedvlwdah" path="res://scenes/pause.tscn" id="2_pu3yx"]
 [ext_resource type="PackedScene" uid="uid://dwy5ihqyhtcfv" path="res://scenes/fade.tscn" id="4_rt2n2"]
 [ext_resource type="Script" uid="uid://cx62t34ow22j2" path="res://scripts/fade.gd" id="5_c16ls"]
+[ext_resource type="PackedScene" uid="uid://btqe75lmfsftj" path="res://scenes/option.tscn" id="6_c1pb6"]
 [ext_resource type="AudioStream" uid="uid://cicnabh37mlvo" path="res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3" id="7_18nlu"]
 [ext_resource type="Script" uid="uid://i0dhusuhna1b" path="res://scripts/main_camera.gd" id="8_18nlu"]
 
@@ -35,6 +36,10 @@ modulate = Color(1, 1, 1, 0)
 [node name="fade" parent="canvasNodes/canvasPause" unique_id=20099342 instance=ExtResource("4_rt2n2")]
 mouse_filter = 2
 script = ExtResource("5_c16ls")
+
+[node name="canvasOption" type="CanvasLayer" parent="canvasNodes" unique_id=897743590]
+
+[node name="option" parent="canvasNodes/canvasOption" unique_id=1724685000 instance=ExtResource("6_c1pb6")]
 
 [node name="player" parent="." unique_id=210516738 instance=ExtResource("1_pw63i")]
 position = Vector2(576, 529)
