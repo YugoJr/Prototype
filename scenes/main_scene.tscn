@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://byabdedvlwdah" path="res://scenes/pause.tscn" id="2_pu3yx"]
 [ext_resource type="PackedScene" uid="uid://dwy5ihqyhtcfv" path="res://scenes/fade.tscn" id="4_rt2n2"]
 [ext_resource type="Script" uid="uid://cx62t34ow22j2" path="res://scripts/fade.gd" id="5_c16ls"]
-[ext_resource type="AudioStream" uid="uid://cicnabh37mlvo" path="res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3" id="7_c16ls"]
+[ext_resource type="AudioStream" uid="uid://cicnabh37mlvo" path="res://assets/music/Sakuzyo - 7 Wondersmaimai でらっくす.mp3" id="7_18nlu"]
+[ext_resource type="Script" uid="uid://i0dhusuhna1b" path="res://scripts/main_camera.gd" id="8_18nlu"]
 
 [node name="mainScene" type="Node2D" unique_id=1723682673]
 script = ExtResource("1_gubc5")
@@ -15,6 +16,7 @@ script = ExtResource("1_gubc5")
 
 [node name="canvasMain" type="CanvasLayer" parent="canvasNodes" unique_id=1734742517]
 layer = -1
+follow_viewport_enabled = true
 
 [node name="mainUI" parent="canvasNodes/canvasMain" unique_id=2026747027 instance=ExtResource("1_w2twt")]
 z_index = -1
@@ -38,7 +40,10 @@ script = ExtResource("5_c16ls")
 position = Vector2(576, 529)
 
 [node name="music" type="AudioStreamPlayer" parent="." unique_id=372020352]
-stream = ExtResource("7_c16ls")
+stream = ExtResource("7_18nlu")
 autoplay = true
+
+[node name="mainCamera" type="Camera2D" parent="." unique_id=1304590000]
+script = ExtResource("8_18nlu")
 
 [editable path="canvasNodes/canvasMain/mainUI"]

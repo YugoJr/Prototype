@@ -4,13 +4,13 @@ var visual_accuracy: float = 100.0
 # Called when the node enters the scene tree for the first time.
 func _process(delta: float) -> void:
 	$score/progress.value = clamp((global.levelProgress / global.levelLength) * 100, 0, 100)
-	$hpBar.value = global.playerHP
+	$hpBar.value = lerp($hpBar.value, global.playerHP, 0.4)
 	var currentScore = int(round(lerp(int($score.text), global.score, 0.75)))
 	$score.text = "%010d" % currentScore
 	global.accuracy = (global.accuracyScore / global.resolvedNotes) * 100.0
 	visual_accuracy = lerp(visual_accuracy, global.accuracy, 0.75)
 	$accuracy.text = "%.2f%%" % visual_accuracy
-	$combo.text = str(global.combo) + "x"
+	$combo.text = str(global.combo) + "x" + str(global.damageCombo)
 	
 func setKeys():
 	var children = $playerLines.get_children()

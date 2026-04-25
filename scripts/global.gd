@@ -12,17 +12,21 @@ func convertToInput(value):
 	var strings = ["noteE", "noteR", "noteD", "noteF", "noteC", "noteV", "noteU", "noteI", "noteJ", "noteK", "noteM", "note,"]
 	return strings[value]
 
+func convertLaneToPos(lane):
+	return 377 + (lane * 80)
+
 var viewportSize
 var centerViewport
 var levelProgress = 0
 var levelLength = 137
-var playerHP = 15.0
+var playerHP = 100.0
 var score = 0
 var noteSpeed = 1.0
 var accuracy = 0
 var accuracyScore = 1
 var resolvedNotes = 1
 var combo = 0
+var damageCombo = 1.0
 
 var currentKeys = [0, 1, 6, 7]
 
@@ -49,10 +53,11 @@ func fade_and_pause(target_node: CanvasItem, to_alpha: float, duration: float) -
 
 func resetData():
 	levelProgress = 0
-	playerHP = 15.0
+	playerHP = 100.0
 	currentKeys = [0, 1, 6, 7]
 	score = 0
 	accuracyScore = 1
 	resolvedNotes = 1
 	combo = 0
+	damageCombo = 1.0
 	get_tree().current_scene.find_child("mainUI").setKeys()

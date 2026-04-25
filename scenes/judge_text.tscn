@@ -3,23 +3,28 @@
 [ext_resource type="Script" uid="uid://c6voth6ipy2t6" path="res://scripts/judge_text.gd" id="1_pkesw"]
 [ext_resource type="FontFile" uid="uid://uevkn8vsq43x" path="res://assets/fonts/MotionControl-Bold.otf" id="1_s00nl"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pkesw"]
+
 [node name="judgeText" type="Node2D" unique_id=808325125]
 script = ExtResource("1_pkesw")
 
-[node name="Label" type="Label" parent="." unique_id=659293855]
+[node name="Label" type="RichTextLabel" parent="." unique_id=1559770421]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -33.0
-offset_top = -11.5
-offset_right = 33.0
-offset_bottom = 11.5
+offset_left = -50.0
+offset_top = -50.0
+offset_right = 50.0
+offset_bottom = 50.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("1_s00nl")
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/normal_font = ExtResource("1_s00nl")
+theme_override_font_sizes/normal_font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxEmpty_pkesw")
+bbcode_enabled = true
 text = "PERFECT"
+scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1

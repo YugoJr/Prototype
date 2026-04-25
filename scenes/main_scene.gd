@@ -5,10 +5,12 @@ var levelData = []
 var noteScene = preload("res://scenes/note.tscn")
 var judgeTextScene = preload("res://scenes/judge_text.tscn")
 
+const PERFECT_FRAME_WINDOW = 0.00067
+const CRITICAL_PERFECT_WINDOW = 0.01
 const PERFECT_WINDOW = 0.05
 const GREAT_WINDOW   = 0.10
-const GOOD_WINDOW    = 0.18
-const MISS_WINDOW    = 0.3 # Tightened from 0.9 for better feel
+const GOOD_WINDOW    = 0.15
+const MISS_WINDOW    = 0.3
 
 const NOTE_TRAVEL_TIME = 1.5
 
@@ -30,7 +32,7 @@ func schedule_note(delay, data):
 func spawn_actual_note(data):
 	var clone = noteScene.instantiate()
 	add_child(clone)
-	clone.position.x = 377 + (data["pos"] * 80)  # Adjusted for pos 1-4
+	clone.position.x = global.convertLaneToPos(data["pos"])  # Adjusted for pos 1-4
 	clone.setup(data)
 	clone.add_to_group("active_notes") # Faster searching
 
@@ -66,7 +68,7 @@ func check_timing(lane_pressed: int):
 	# 2. If found within window, judge and destroy visual
 	if closest_note and smallest_diff <= MISS_WINDOW:
 		global.resolvedNotes += 1
-		judge_hit(smallest_diff)
+		judge_hit(smallest_diff, lane_pressed)
 		closest_note["resolved"] = true
 		
 		# Search the group instead of all children
@@ -78,21 +80,35 @@ func check_timing(lane_pressed: int):
 	else:
 		print("Ghost press in lane: ", lane_pressed)
 
-func judge_hit(diff: float):
+func judge_hit(diff: float, pos):
 	var judgement: String = ""
 	var base_points: int = 0
 	
 	# 1. Determine Judgement and Base Points
-	if diff <= PERFECT_WINDOW:
+	if diff <= PERFECT_FRAME_WINDOW:
+		judgement = "[rainbow freq=1.5 sat=.8 val=1]FRAME PERFECT[/rainbow]"
+		base_points = 5000
+		global.accuracyScore += 1.0
+		global.combo += 1
+		global.damageCombo = 0.8
+	elif diff <= CRITICAL_PERFECT_WINDOW:
+		judgement = "[rainbow freq=1.5 sat=.8 val=1]CRITICAL PERFECT[/rainbow]"
+		base_points = 2000
+		global.accuracyScore += 1.0
+		global.combo += 1
+		global.damageCombo -= 0.7
+	elif diff <= PERFECT_WINDOW:
 		judgement = "PERFECT"
 		base_points = 1000
 		global.accuracyScore += 1.0
 		global.combo += 1
+		global.damageCombo -= 0.3
 	elif diff <= GREAT_WINDOW:
 		judgement = "GREAT"
 		base_points = 500
 		global.accuracyScore += 0.8
 		global.combo += 1
+		global.damageCombo -= 0.1
 	elif diff <= GOOD_WINDOW:
 		judgement = "GOOD"
 		base_points = 200
@@ -102,9 +118,12 @@ func judge_hit(diff: float):
 		judgement = "BAD"
 		base_points = 50
 		global.combo = 0 # Break combo on BAD
+		global.playerHP -= 2.0 * global.damageCombo
+		global.damageCombo = global.damageCombo * 1.4
 	
 	# 2. Calculate Score with Multiplier
 	# (Combo bonus: every 10 combo adds 10% to score, capped at 2x)
+	$mainCamera.play_note_bop()
 	var multiplier = clamp(1.0 + (global.combo / 100.0), 1.0, 2.0)
 	global.score += int(base_points * multiplier)
 	global.playerHP += base_points / 750
@@ -113,7 +132,8 @@ func judge_hit(diff: float):
 	# 4. Spawn Visuals
 	var textClone = judgeTextScene.instantiate()
 	add_child(textClone)
-	textClone.position = global.centerViewport
+	textClone.position.x = global.convertLaneToPos(pos)
+	textClone.position.y = 500
 	textClone.get_node("Label").text = judgement
 	
 	# Optional: Color the text
@@ -125,6 +145,7 @@ func get_song_time() -> float:
 	return $music.get_playback_position() + AudioServer.get_time_since_last_mix()
 
 func _physics_process(_delta: float) -> void:
+	global.damageCombo = clamp(global.damageCombo, 0.8, 4.0)
 	var current_song_time = get_song_time()
 	global.levelProgress = current_song_time
 	
@@ -135,7 +156,14 @@ func _physics_process(_delta: float) -> void:
 			global.combo = 0           # Combo breaks on miss
 			
 			# Recalculate accuracy because resolvedNotes changed
-			
+			var textClone = judgeTextScene.instantiate()
+			add_child(textClone)
+			textClone.position.x = global.convertLaneToPos(note["pos"])
+			textClone.position.y = 500
+			textClone.get_node("Label").text = "MISS"
+			textClone.modulate = Color.RED
+			global.playerHP -= 2.5 * global.damageCombo
+			global.damageCombo = global.damageCombo * 1.7
 			print("AUTO MISS (ID: ", note["id"], ")")
 
 func handle_pause():
