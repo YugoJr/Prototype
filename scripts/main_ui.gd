@@ -15,6 +15,7 @@ func _process(delta: float) -> void:
 	visual_accuracy = lerp(visual_accuracy, global.accuracy, 0.75)
 	$accuracy.text = "%.2f%%" % visual_accuracy
 	$combo.text = str(global.combo) + "x"
+	$debug.text = str(round(1 / delta)) + " FPS"
 	
 func setKeys():
 	var children = $playerLines.get_children()

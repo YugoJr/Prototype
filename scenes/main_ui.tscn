@@ -381,19 +381,6 @@ theme_override_font_sizes/font_size = 39
 text = "100.0%"
 horizontal_alignment = 2
 
-[node name="hpBar" type="TextureProgressBar" parent="." unique_id=546290183]
-layout_mode = 1
-offset_left = 25.999998
-offset_top = 15.0
-offset_right = 910.0
-offset_bottom = 137.0
-scale = Vector2(0.45, 0.5)
-step = 0.01
-value = 100.0
-texture_under = ExtResource("3_i1gbh")
-texture_progress = ExtResource("4_46p8p")
-texture_progress_offset = Vector2(-60, -3)
-
 [node name="score" type="Label" parent="." unique_id=1803973220]
 layout_mode = 1
 anchors_preset = 1
@@ -456,3 +443,30 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_r8eje")
 text = "Speed set to 1.0x"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="debug" type="Label" parent="." unique_id=1349581455]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "60 FPS"
+
+[node name="hpBar" type="TextureProgressBar" parent="." unique_id=546290183]
+layout_mode = 0
+offset_left = 25.999998
+offset_top = 15.0
+offset_right = 910.0
+offset_bottom = 137.0
+rotation = 0.011048718
+scale = Vector2(0.45, 0.5)
+step = 0.01
+value = 100.0
+texture_under = ExtResource("3_i1gbh")
+texture_progress = ExtResource("4_46p8p")
+texture_progress_offset = Vector2(-39.88, -3)

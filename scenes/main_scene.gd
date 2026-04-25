@@ -5,11 +5,11 @@ var levelData = []
 var noteScene = preload("res://scenes/note.tscn")
 var judgeTextScene = preload("res://scenes/judge_text.tscn")
 
-const PERFECT_FRAME_WINDOW = 0.007
-const CRITICAL_PERFECT_WINDOW = 0.01
-const PERFECT_WINDOW = 0.05
-const GREAT_WINDOW   = 0.10
-const GOOD_WINDOW    = 0.15
+const PERFECT_FRAME_WINDOW    = 0.003 # 5ms (Hardcore frame-perfect)
+const CRITICAL_PERFECT_WINDOW = 0.025 # 25ms (The "Elite" zone)
+const PERFECT_WINDOW          = 0.050 # 50ms (The "Standard" zone)
+const GREAT_WINDOW            = 0.100 # 100ms
+const GOOD_WINDOW             = 0.150 # 150ms
 const MISS_WINDOW    = 0.3
 
 const NOTE_TRAVEL_TIME = 1.5
@@ -20,10 +20,8 @@ func _ready():
 		note["resolved"] = false
 		var travel_time = NOTE_TRAVEL_TIME / global.noteSpeed
 		var spawn_delay = note["time"] - travel_time
-		if spawn_delay > 0:
-			schedule_note(spawn_delay, note)
-		else:
-			spawn_actual_note(note)
+
+		spawn_actual_note(note)
 
 func schedule_note(delay, data):
 	await get_tree().create_timer(delay).timeout
@@ -36,21 +34,48 @@ func spawn_actual_note(data):
 	clone.setup(data)
 	clone.add_to_group("active_notes") # Faster searching
 
+var speed_scroll_timer = 0.0
+var is_holding_speed = 0 # -1 for down, 1 for up, 0 for none
+
 func _input(event: InputEvent) -> void:
+	# --- 1. HANDLE SPEED INPUT (Independent of lanes) ---
+	if event.is_action_pressed("speedUp"):
+		changeSpeed(-0.1)
+		is_holding_speed = -1
+	elif event.is_action_released("speedUp"):
+		is_holding_speed = 0
+		speed_scroll_timer = 0.0
+
+	if event.is_action_pressed("speedDown"):
+		changeSpeed(0.1)
+		is_holding_speed = 1
+	elif event.is_action_released("speedDown"):
+		is_holding_speed = 0
+		speed_scroll_timer = 0.0
+
+	# --- 2. HANDLE ESCAPE ---
 	if event.is_action_pressed("escape"):
 		handle_pause()
-		
-	if event.is_action_pressed("speedUp"): changeSpeed(-0.1)
-	if event.is_action_pressed("speedDown"): changeSpeed(0.1)
-		
+
+	# --- 3. HANDLE NOTE LANES (The loop) ---
 	var lane_counter = 0
 	for key_index in global.currentKeys:
-		lane_counter += 1 # This corresponds to "pos" 1, 2, 3, 4
+		lane_counter += 1
 		var action = global.convertToInput(key_index)
 		
 		if event.is_action_pressed(action):
 			$canvasNodes/canvasMain/mainUI.register(lane_counter)
 			check_timing(lane_counter)
+
+func _process(delta: float) -> void:
+	if is_holding_speed != 0:
+		speed_scroll_timer += delta
+		# Wait 0.3s (initial delay) before rapid-firing every 0.05s
+		if speed_scroll_timer > 0.3:
+			changeSpeed(0.1 * is_holding_speed)
+			# Reset timer slightly so it triggers again quickly
+			speed_scroll_timer = 0.25
+		
 
 func check_timing(lane_pressed: int):
 	var current_song_time = get_song_time()
@@ -77,8 +102,6 @@ func check_timing(lane_pressed: int):
 				#print("Destroying Note ID: ", closest_note["id"])
 				note_node.queue_free()
 				break
-	else:
-		print("Ghost press in lane: ", lane_pressed)
 
 func judge_hit(diff: float, pos):
 	var judgement: String = ""
@@ -144,7 +167,8 @@ func get_song_time() -> float:
 	return $music.get_playback_position() + AudioServer.get_time_since_last_mix()
 
 func _physics_process(_delta: float) -> void:
-	global.damageCombo = clamp(global.damageCombo, 0.8, 4.5)
+	global.playerHP = clamp(global.playerHP, 0.0, 100.0)
+	global.damageCombo = clamp(global.damageCombo, 0.8, 5.5)
 	var current_song_time = get_song_time()
 	global.levelProgress = current_song_time
 	
@@ -162,7 +186,6 @@ func _physics_process(_delta: float) -> void:
 			textClone.get_node("Label").text = "MISS"
 			textClone.modulate = Color.RED
 			global.damagePlayer()
-			print("AUTO MISS (ID: ", note["id"], ")")
 
 func handle_pause():
 	if tween: tween.kill()
@@ -181,8 +204,8 @@ func loadChart(path: String):
 	return json.data if json.data else []
 
 func changeSpeed(speed):
-	if global.levelProgress > 5: return
-	global.noteSpeed = clamp(global.noteSpeed + speed, 0.1, 2.5)
+	#if global.levelProgress > 5: return
+	global.noteSpeed = clamp(global.noteSpeed + speed, 0.1, 3.5)
 	var label = $canvasNodes/canvasMain/mainUI/speedChange
 	label.text = "Speed: x" + str(global.noteSpeed)
 	if tween and tween.is_valid(): tween.kill()

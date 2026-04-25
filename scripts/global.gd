@@ -61,7 +61,8 @@ var currentKeys = [0, 1, 6, 7]
 
 func damagePlayer():
 	global.playerHP -= 4.5 * global.damageCombo
-	global.damageCombo = global.damageCombo * 1.3
+	print("Damage: " + str(4.5 * global.damageCombo) + "% at " + str(global.damageCombo) + "x multipliers (now " + str(global.playerHP) + "%)")
+	global.damageCombo = global.damageCombo * 1.45
 
 func _ready() -> void:
 	viewportSize = get_viewport_rect().size

@@ -11,7 +11,7 @@ func setup(data):
 	note_time = data["time"]
 	id = int(data["id"]) # Ensure ID is an integer
 
-func _physics_process(_delta):
+func _process(_delta):
 	var song_time = get_parent().get_song_time()
 	var travel_time = BASE_TRAVEL_TIME / global.noteSpeed
 	var time_until_hit = note_time - song_time
@@ -22,7 +22,7 @@ func _physics_process(_delta):
 		position.y = START_Y
 		return
 
-	progress = clamp(progress, 0.0, 1.1) # Allow slightly past 1.0
+	progress = clamp(progress, 0.0, 1.0) # Allow slightly past 1.0
 	position.y = lerp(START_Y, HIT_Y, progress)
 
 	# Cleanup if missed and off-screen
